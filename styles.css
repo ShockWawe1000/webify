@@ -209,3 +209,8 @@ a,
             padding-left: 0rem !important;
           }
         
+
+
+          .inputText{
+            background-color: rgba(0,0,0,0);
+          }
