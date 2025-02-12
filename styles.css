@@ -211,6 +211,8 @@ a,
         
 
 
-          .inputText{
-            background-color: rgba(0,0,0,0);
+
+
+          #checkPricingButton{
+            width: 70%;
           }

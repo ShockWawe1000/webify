@@ -1,4 +1,7 @@
 
+
+
+
       try {
         Typekit.load();
       } catch (e) {}
@@ -56,7 +59,7 @@ form.addEventListener('submit', function(e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   result.innerHTML = "Please wait..."
-
+  var sent= false;
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
@@ -69,6 +72,7 @@ form.addEventListener('submit', function(e) {
             let json = await response.json();
             if (response.status == 200) {
                 result.innerHTML = "Form submitted successfully";
+                sent=true;
             } else {
                 console.log(response);
                 result.innerHTML = json.message;
@@ -81,7 +85,10 @@ form.addEventListener('submit', function(e) {
         .then(function() {
             form.reset();
             setTimeout(() => {
-                result.style.display = "none";
+              if (sent==false)
+               result.innerHTML = "TRY <br> AGAIN" ;
+             else
+             result.innerHTML = "THANK <br> YOU" ;
             }, 3000);
         });
 });
