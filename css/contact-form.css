@@ -1,5 +1,11 @@
+/*
+ background: linear-gradient(to right, #003554 0%, #0582ca 100%);
+
+*/
+
+
 body {
-  background: linear-gradient(to right, #003554 0%, #0582ca 100%);
+
   font-size: 12px;
 }
 
@@ -64,7 +70,7 @@ input {
   right: 20px;
   bottom: 0;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.541);
   z-index: -1;
 }
 
