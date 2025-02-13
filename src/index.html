@@ -55,8 +55,7 @@
       rel="apple-touch-icon"
     />
     
-      <link rel="stylesheet" href="styles.css">
-      <link rel="stylesheet" href="css/contact-form.css">
+
 </head>
   <body>
     <div class="page-wrapper">
@@ -117,15 +116,9 @@
 
                 >
                 <!-- Logo -->
-                
-                <img
-                  src= "image/webify_logo.svg"
-                  loading="lazy"
-                  width="66"
-                  alt=""
-                  class="image-100 "
-                  style="padding-top: 10px; width: 100px;"
-              /></a>
+                <div id="webify_logo">
+                </div>
+                </a>
             </div>
             <div class="nav-right">
               <a
@@ -313,14 +306,8 @@
                           class="features-card"
                         >
                           <div class="margin-bottom-16">
-                            <div class="features-icon">
-                              <img
-                                src="image/team.svg"
-                                loading="lazy"
-                                alt=""
-                                class="image-100"
-                                
-                              />
+                            <div class="features-icon" id="teamImg">
+                          
                             </div>
                           </div>
                           <div class="bottom-margin-4">
@@ -385,13 +372,8 @@
                         class="features-card"
                       >
                         <div class="margin-bottom-16">
-                          <div class="features-icon">
-                            <img
-                              src="image/refund.svg"
-                              loading="lazy"
-                              alt=""
-                              class="image-100"
-                            />
+                          <div class="features-icon" id="refundImg">
+                        
                           </div>
                         </div>
                         <div class="bottom-margin-4">
@@ -543,42 +525,12 @@
 
 
                         <div class="ai-grid" style="display:grid; grid-template-columns: 1fr 1fr;  grid-template-columns: 1fr 1fr; gap:5px;" >
-                          <div class="ai-icon">
-                            <img
-                              src="image/sol.png"
-                              loading="lazy"
-                              alt=""
-                              class="image-100"
-                            />
-                          </div>
+          
+                          <div class="ai-icon" id="btcImg"></div>
+                          <div class="ai-icon" id="solImg"></div>
+                          <div class="ai-icon" id="moonpayImg"></div>
+                          <div class="ai-icon" id="binanceImg"></div>
 
-                          <div class="ai-icon">
-                            <img
-                            src="image/btc.png"
-                              loading="lazy"
-                              alt=""
-                              class="image-100"
-                            />
-                          </div>
-                          
-
-                          <div class="ai-icon">
-                            <img
-                            src="image/moonpay.png"
-                              loading="lazy"
-                              alt=""
-                              class="image-100"
-                            />
-                          </div>
-
-                          <div class="ai-icon">
-                            <img
-                            src="image/binance.png"
-                              loading="lazy"
-                              alt=""
-                              class="image-100"
-                            />
-                          </div>
 
                           
                         </div>
@@ -1415,7 +1367,8 @@
                           alt=""
                           class="image-100"
                         />
-                        <img src="image/trustpilot.png" style="width: 100px;">
+                        <div id="trustpilotImg"></div>
+                       
                       </div>
                     </div>
 
@@ -2588,15 +2541,9 @@
             <div class="page-padding">
               <div class="vertical-spacing footer-spacing">
                 <div class="footer-flex">
-                  <a href="#" class="footer-brand w-inline-block"
-                    ><img
-                      src="image/webify_logo.svg"
-                      loading="lazy"
-                      width="66"
-                      alt=""
-                      class="image-100"
-                      style="width: 70px; padding-top: 10px;"
-                  /></a>
+                  <a href="#" class="footer-brand w-inline-block">
+                    <div id="webifyLogoImg2"></div>
+                  </a>
                   <div class="footer-link-flex">
                     <div class="footer_text-wrapper">
                       <div class="copyright-text">© Webflow <script>document.write(new Date().getFullYear())</script></div>
@@ -2701,6 +2648,6 @@
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     
-      <script src="script.js"></script>
+      
 </body>
 </html>

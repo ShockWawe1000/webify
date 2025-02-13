@@ -255,8 +255,22 @@ a,
   margin-left: 50%;
 }
 
+.webifyLogo{
+  padding-top: 10px; 
+  width: 100px;
+
+}
+
+#trustpilotImg{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  padding: 10px 20px;
+ 
+}
 @media screen and (max-width: 900px) {
   #atWebifyTextContainer {
     margin-left: 0%;
   }
 }
+

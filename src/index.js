@@ -1,4 +1,13 @@
-      try {
+import './css/webflow-required-styles.css'
+import './css/contactForm.css'
+
+import { setImages } from './js/images'
+  
+
+
+setImages();
+
+    try {
         Typekit.load();
       } catch (e) {}
     
