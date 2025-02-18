@@ -1,17 +1,20 @@
-let intro = document.getElementById("intro")
+
 let logo = document.getElementById("animatedLogo")
 
 
 function endIntro(){
     setTimeout(()=>{
+        let intro = document.getElementById("intro")
         intro.style.top = "-100vh";
-    },20)
-    console.log("ss")
+    },39)
+    
 }
 
 export function introScreen(){
-    console.log("ss")
-    intro.style.top = "-100vh";
+
+    
+
+ 
     if (document.readyState !== 'loading') {
         endIntro()
     } else {

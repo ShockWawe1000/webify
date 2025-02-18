@@ -7,14 +7,12 @@ import "./css/webflow.css"
 import { setImages } from './js/images'
 import {initContactButtons } from "./js/contactFormModule"
 import {webflowInit} from "./js/webflowReq"
-import {importTypekit} from "./js/typekit"
 import {introScreen} from "./js/introScreen"
 
 
 webflowInit();
 setImages();
 initContactButtons();
-importTypekit();
 introScreen();
 
  

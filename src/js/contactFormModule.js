@@ -33,18 +33,20 @@ function openContactModal() {
         <div class="screen-body-item">
           <form id="formModal" class="app-form" method="POST">
             <input type="hidden" name="access_key" value="40d910f7-a3af-41a9-a081-7323558c24e0">
-            <div class="app-form-group">
-              <input class="app-form-control" name="name" placeholder="NAME" autocomplete  required>
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" name="email" placeholder="EMAIL" autocomplete  required>
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete >
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" name="mesage" placeholder="MESSAGE" required>
-            </div>
+
+              <div class="app-form-group">
+                <input class="app-form-control"  name="name" placeholder="NAME"  autocomplete="given-name"  required>
+              </div>
+              
+              <div class="app-form-group">
+                <input class="app-form-control" name="email" placeholder="EMAIL" autocomplete="email"  required>
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" name="mesage" placeholder="MESSAGE"  autocomplete="off" required>
+              </div>
             <div class="app-form-group buttons">
               <button type="button" class="app-form-button" id="closeButton2">CANCEL</button>
               <button type="submit" class="app-form-button">SEND</button>
