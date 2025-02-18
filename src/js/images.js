@@ -11,6 +11,8 @@ import refund from "../image/refund.svg"
 import team from "../image/team.svg"
 import webify_logo from "../image/webify_logo.svg"
 
+import animated_logo from "../image/intro.gif"
+
 function createImageDiv(element, id , setClass )
 {
     const tempImg = new Image();
@@ -20,6 +22,17 @@ function createImageDiv(element, id , setClass )
     tempImg.setAttribute('alt', id);
     var parentElement = document.getElementById(id)
     parentElement.append(tempImg)
+
+}
+
+function createGifDiv(element, id , setClass )
+{
+    const elementSvg = document.createElement('div');
+
+    elementSvg.innerHTML = element;
+
+    var parentElement = document.getElementById(id)
+    parentElement.append(elementSvg)
 
 }
 
@@ -41,8 +54,6 @@ function createMultipleImageDiv(element, id, setClass)
 }
 
 export function setImages(){
-    
-
     createImageDiv(binance, "binanceImg", "image-100")
     createImageDiv(moonpay, "moonpayImg", "image-100")
     createImageDiv(btc, "btcImg", "image-100")
@@ -51,6 +62,8 @@ export function setImages(){
     createImageDiv(team, "teamImg", "image-100")
     createImageDiv(refund, "refundImg", "image-100")
     createImageDiv(trustpilot, "trustpilotImg", "image-100")
+
     createImageDiv(webify_logo, "webifyLogoImg2", "webifyLogo")
+    createImageDiv(animated_logo, "animatedLogo", "animatedLogo")
     // window.onload= createMultipleImageDiv(project,".projectImg");
 }
