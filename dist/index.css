@@ -13,6 +13,20 @@ body {
   text-decoration-thickness: from-font !important;
 }
 
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--black);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 211, 211);
+}
+
 a {
   text-decoration-thickness: from-font !important;
 }
@@ -274,7 +288,7 @@ a,
 }
 
 #animatedLogo {
-  width: 30%;
+  width: 20%;
   z-index: 98;
 }
 
@@ -295,9 +309,16 @@ a,
   transform: translateZ(20px);
 }
 
+#animated-svg {
+  transform: scale(1.2); /* Zoom in more on smaller screens */
+}
+
 @media (max-width: 1024px) {
   #animated-svg {
     transform: scale(1.4); /* Zoom in more on smaller screens */
+  }
+  #animatedLogo {
+    width: 30%;
   }
 }
 @media screen and (max-width: 991px) {
@@ -349,6 +370,26 @@ input {
   letter-spacing: 1.4px;
 }
 
+textarea {
+  resize: vertical;
+  max-height: 200px;
+  min-height: 40px;
+}
+
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(133, 133, 133);
+}
+
+textarea::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(133, 133, 133);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 211, 211);
+}
+
 .credits {
   max-width: fit-content;
   margin-left: auto;
@@ -360,6 +401,7 @@ input {
 .contactFormContainerMain {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .contactLeft {
@@ -367,18 +409,20 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 50px;
   margin-right: 40px;
+  background: transparent;
 }
 
 .contactRight {
   width: 70%;
   width: 100%;
+  background: transparent;
 }
 
 .background {
   display: flex;
   min-height: 100vh;
+  background: transparent;
 }
 
 .containerContactForm {
@@ -387,12 +431,16 @@ input {
   padding: 10px;
   width: 100%;
   max-width: 700px;
+  background: transparent;
 }
 
 .screen {
   position: relative;
-  background: #3e3e3e;
+  background: #424242;
   border-radius: 15px;
+  width: 100%;
+  max-width: 620px;
+  align-self: center;
 }
 
 .screen:after {
@@ -400,12 +448,13 @@ input {
   display: block;
   position: absolute;
   top: 0;
-  left: 20px;
-  right: 20px;
+  left: 0px;
+  right: 0px;
   bottom: 0;
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.541);
   z-index: -1;
+  background: transparent;
 }
 
 .screen-header {
@@ -413,10 +462,24 @@ input {
   align-items: center;
   padding: 10px 20px;
   background: #4d4d4f;
+  backdrop-filter: blur(50px);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  content: "";
 }
 
+@supports (backdrop-filter: blur(10px)) {
+  .screen, .screen-header {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+  }
+  .screen {
+    background: rgba(66, 66, 66, 0.2941176471);
+  }
+  .screen-header {
+    background: rgba(77, 77, 79, 0.0823529412);
+  }
+}
 .screen-header-left {
   margin-right: auto;
 }
@@ -500,7 +563,7 @@ input {
 .app-contact {
   margin-top: auto;
   font-size: 12px;
-  color: #888;
+  color: #a8a8a8;
 }
 
 .app-form-group {
@@ -521,7 +584,7 @@ input {
   padding: 10px 0;
   background: none;
   border: none;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #7e7e7e;
   color: #ddd;
   font-size: 14px;
   text-transform: uppercase;
@@ -530,7 +593,7 @@ input {
 }
 
 .app-form-control::placeholder {
-  color: #666;
+  color: #a8a8a8;
 }
 
 .app-form-control:focus {
@@ -617,8 +680,7 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
 .modal-content {
@@ -627,6 +689,10 @@ p {
   z-index: 999;
   width: 700px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal.hidden {
@@ -4421,18 +4487,19 @@ a {
 }
 .card {
   overflow: hidden;
-  transition: 4s transform ease-in-out, background-color ease-in-out;
   height: 248px;
-}
-
-.card:hover {
-  transform: rotate3d(1, 1, 0, 10deg);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 24px 28px;
+  will-change: transform, filter;
+  backdrop-filter: blur(10px);
 }
 
 .glow {
   width: 350px;
   height: 350px;
-  background-color: #f6be8a;
   filter: blur(180px);
   border-radius: 300px;
   opacity: 0;
@@ -4444,6 +4511,7 @@ a {
   top: calc(var(--y, 0) * 1px - 50px);
   left: calc(var(--x, 0) * 1px - 50px);
   z-index: -2;
+  background: rgb(180, 94, 238);
 }
 
 .card:hover .glow {

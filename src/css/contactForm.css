@@ -21,7 +21,30 @@
     font-weight: 700;
     letter-spacing: 1.4px;
   }
-  
+  textarea{
+    resize: vertical;
+    max-height: 200px;
+    min-height: 40px;
+  }
+
+  textarea::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb(133, 133, 133)
+}
+
+textarea::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: rgb(133, 133, 133)
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+	background-color: rgb(211, 211, 211)
+}
+
+
   .credits {
     max-width: fit-content;
     margin-left: auto;
@@ -32,6 +55,7 @@
   .contactFormContainerMain {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
   
   .contactLeft {
@@ -39,17 +63,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 50px;
+
     margin-right: 40px;
+    background: transparent;
   }
   .contactRight {
     width: 70%;
     width: 100%;
+    background: transparent;
   }
   
   .background {
     display: flex;
     min-height: 100vh;
+    background: transparent;
   }
   
   .containerContactForm {
@@ -58,12 +85,17 @@
     padding: 10px;
     width: 100%;
     max-width: 700px;
+    background: transparent;
   }
   
   .screen {
     position: relative;
-    background: #3e3e3e;
+    background: #424242;
     border-radius: 15px;
+
+    width:100%;
+    max-width: 620px;
+    align-self: center;
   }
   
   .screen:after {
@@ -71,23 +103,42 @@
     display: block;
     position: absolute;
     top: 0;
-    left: 20px;
-    right: 20px;
+    left: 0px;
+    right: 0px;
     bottom: 0;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.541);
     z-index: -1;
+    background: transparent;
   }
   
   .screen-header {
     display: flex;
     align-items: center;
     padding: 10px 20px;
+       
     background: #4d4d4f;
+   
+    backdrop-filter: blur(50px);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    content: "";
   }
   
+  @supports (backdrop-filter: blur(10px)) {
+    .screen  , .screen-header  {
+      
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+    }
+    .screen{
+      background: #4242424b;
+    }
+    .screen-header{
+      background: #4d4d4f15;
+    }
+
+}
   .screen-header-left {
     margin-right: auto;
   }
@@ -171,7 +222,7 @@
   .app-contact {
     margin-top: auto;
     font-size: 12px;
-    color: #888;
+    color: #a8a8a8;
   }
   
   .app-form-group {
@@ -192,7 +243,7 @@
     padding: 10px 0;
     background: none;
     border: none;
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #7e7e7e;;
     color: #ddd;
     font-size: 14px;
     text-transform: uppercase;
@@ -201,7 +252,7 @@
   }
   
   .app-form-control::placeholder {
-    color: #666;
+    color: #a8a8a8;;
   }
   
   .app-form-control:focus {

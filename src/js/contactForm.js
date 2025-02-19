@@ -89,7 +89,7 @@ export function contactFormLogicModal(formId,resultId){
                   if (sent==false)
                    result.innerHTML = "TRY <br> AGAIN" ;
                  else
-                 result.innerHTML = "THANK <br> YOU" ;
+                 result.innerHTML = "THANK <br> YOU <3" ;
                 }, 3000);
             });
     });

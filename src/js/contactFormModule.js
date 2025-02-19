@@ -7,7 +7,10 @@ const modalContent = document.getElementById("modalContent");
 let closeButton1, closeButton2;
 
 
-function openContactModal() {
+function openContactModal( message) {
+
+
+
   const contactFormHTML = `
     <div class="screen">
       <div class="screen-header">
@@ -46,8 +49,9 @@ function openContactModal() {
               <div class="app-form-group">
                 <input class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
               </div>
+
               <div class="app-form-group message">
-                <input class="app-form-control" name="mesage" placeholder="MESSAGE"  autocomplete="off" required>
+                <textarea  class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
               </div>
             <div class="app-form-group buttons">
               <button type="button" class="app-form-button" id="closeButton2">CANCEL</button>
@@ -117,7 +121,15 @@ function closeModal() {
 export function initContactButtons(){
 
   buttons.forEach((btn) => {
-    btn.addEventListener("click", openContactModal);
+    const message = btn.dataset.message || "MESSAGE";
+    btn.addEventListener("click", (event) => {
+      
+        openContactModal(message);
+      
+    });
+
+
+    
   });
   
   

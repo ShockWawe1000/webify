@@ -10,13 +10,13 @@ import { setImages } from './js/images'
 import {initContactButtons } from "./js/contactFormModule"
 import {webflowInit} from "./js/webflowReq"
 import {introScreen} from "./js/introScreen"
-
+import {tiltCardsLogic} from "./js/tiltCards"
 
 webflowInit();
 setImages();
 initContactButtons();
 introScreen();
-
+tiltCardsLogic()
  
 
 if (typeof window === "undefined") {
@@ -25,31 +25,6 @@ if (typeof window === "undefined") {
     console.log("JavaScript is enabled");
 }
 
-
-const rootCanvas = document.querySelector("article");
-let cardEl = document.querySelector(".card");
-
-// Day & Nightmode
-
-const dayToggle = document.querySelector(".day");
-const nightToggle = document.querySelector(".night");
-
-dayToggle.onclick = function (e) {
-  rootCanvas.setAttribute("data-theme", "light");
-  dayToggle.classList.add("hidden");
-  nightToggle.classList.remove("hidden");
-};
-nightToggle.onclick = function (e) {
-  rootCanvas.setAttribute("data-theme", "dark");
-  dayToggle.classList.remove("hidden");
-  nightToggle.classList.add("hidden");
-};
-
-cardEl.addEventListener("mousemove", (e) => {
-  const { x, y } = cardEl.getBoundingClientRect();
-  cardEl.style.setProperty("--x", e.clientX - x);
-  cardEl.style.setProperty("--y", e.clientY - y);
-});
 
 
 // // modals

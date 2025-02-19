@@ -1,20 +1,22 @@
 .card {
-    overflow: hidden;
-    transition: 4s transform ease-in-out, background-color ease-in-out;
+  overflow: hidden;
     
     height: 248px;
 
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 24px 28px;
+    will-change: transform, filter;
+    backdrop-filter: blur(10px);
+  }
+  
 
-  }
-  
-  .card:hover {
-    transform: rotate3d(1, 1, 0, 10deg);
-  }
-  
   .glow {
     width: 350px;
     height: 350px;
-    background-color: #f6be8a;
+  
     filter: blur(180px);
     border-radius: 300px;
     opacity: 0;
@@ -26,8 +28,13 @@
     top: calc(var(--y, 0) * 1px - 50px);
     left: calc(var(--x, 0) * 1px - 50px);
     z-index: -2;
+
+    background: rgb(180, 94, 238);
   }
   
+  
+
+
   .card:hover .glow {
     opacity: 0.6;
   }

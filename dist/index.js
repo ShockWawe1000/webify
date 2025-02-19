@@ -82,7 +82,7 @@ function contactFormLogicModal(formId, resultId) {
     }).then(function () {
       form.reset();
       setTimeout(() => {
-        if (sent == false) result.innerHTML = "TRY <br> AGAIN";else result.innerHTML = "THANK <br> YOU";
+        if (sent == false) result.innerHTML = "TRY <br> AGAIN";else result.innerHTML = "THANK <br> YOU <3";
       }, 3000);
     });
   });
@@ -106,7 +106,7 @@ const buttons = document.querySelectorAll(".openContactModal");
 const modal = document.getElementById("modalContainer");
 const modalContent = document.getElementById("modalContent");
 let closeButton1, closeButton2;
-function openContactModal() {
+function openContactModal(message) {
   const contactFormHTML = `
     <div class="screen">
       <div class="screen-header">
@@ -145,8 +145,9 @@ function openContactModal() {
               <div class="app-form-group">
                 <input class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
               </div>
+
               <div class="app-form-group message">
-                <input class="app-form-control" name="mesage" placeholder="MESSAGE"  autocomplete="off" required>
+                <textarea  class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
               </div>
             <div class="app-form-group buttons">
               <button type="button" class="app-form-button" id="closeButton2">CANCEL</button>
@@ -200,7 +201,10 @@ function closeModal() {
 }
 function initContactButtons() {
   buttons.forEach(btn => {
-    btn.addEventListener("click", openContactModal);
+    const message = btn.dataset.message || "MESSAGE";
+    btn.addEventListener("click", event => {
+      openContactModal(message);
+    });
   });
   window.addEventListener("click", event => {
     if (event.target === modal) {
@@ -257,19 +261,21 @@ function createImageDiv(element, id, setClass) {
   parentElement.append(tempImg);
 }
 function createGifDiv(element, id, setClass) {
-  const svgObject = document.createElement("object");
-  svgObject.id = "animated-svg";
-  svgObject.type = "image/svg+xml";
-  svgObject.data = element;
-  svgObject.classList.add(setClass);
-  svgObject.style.width = "100vw"; // Make it fit the screen horizontally
-  svgObject.style.height = "100vh"; // Make it fit the screen vertically
-  svgObject.style.position = "absolute"; // Position it absolutely within the container
-  svgObject.style.top = "0"; // Align to the top of the parent container
-  svgObject.style.left = "0"; // Align to the left of the parent container
+  setTimeout(() => {
+    const svgObject = document.createElement("object");
+    svgObject.id = "animated-svg";
+    svgObject.type = "image/svg+xml";
+    svgObject.data = element;
+    svgObject.classList.add(setClass);
+    svgObject.style.width = "100vw"; // Make it fit the screen horizontally
+    svgObject.style.height = "100vh"; // Make it fit the screen vertically
+    svgObject.style.position = "absolute"; // Position it absolutely within the container
+    svgObject.style.top = "0"; // Align to the top of the parent container
+    svgObject.style.left = "0"; // Align to the left of the parent container
 
-  const parentElement = document.getElementById(id);
-  parentElement.append(svgObject);
+    const parentElement = document.getElementById(id);
+    parentElement.append(svgObject);
+  }, 700);
 }
 function createMultipleImageDiv(element, id, setClass) {
   document.querySelectorAll(id).forEach(el => {
@@ -309,17 +315,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function endIntro() {
   intro.style.display = "none";
-  setTimeout(() => {
-    let intro = document.getElementById("intro");
-    let logo = document.getElementById("animatedLogo");
-    intro.style.backgroundColor = "rgba(0,0,0,0)";
-    logo.style.opacity = 0;
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      intro.style.display = "none";
-      window.scrollTo(0, 0);
-    }, 1000);
-  }, 3900);
+  // setTimeout(()=>{
+  //     let intro = document.getElementById("intro")
+  //     let logo = document.getElementById("animatedLogo")
+  //     intro.style.backgroundColor = "rgba(0,0,0,0)"
+  //     logo.style.opacity = 0;
+  //     window.scrollTo(0,0)
+  //     setTimeout(()=>{
+  //       intro.style.display = "none"
+  //       window.scrollTo(0,0)
+  //     },1000)
+  // },4300)
 }
 function introScreen() {
   if (document.readyState !== 'loading') {
@@ -329,6 +335,32 @@ function introScreen() {
       endIntro();
     });
   }
+}
+
+/***/ }),
+
+/***/ "./src/js/tiltCards.js":
+/*!*****************************!*\
+  !*** ./src/js/tiltCards.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   tiltCardsLogic: () => (/* binding */ tiltCardsLogic)
+/* harmony export */ });
+function tiltCardsLogic() {
+  let cardEls = document.getElementsByClassName("card");
+  Array.from(cardEls).forEach(cardEl => {
+    cardEl.addEventListener("mousemove", e => {
+      const {
+        x,
+        y
+      } = cardEl.getBoundingClientRect();
+      cardEl.style.setProperty("--x", e.clientX - x);
+      cardEl.style.setProperty("--y", e.clientY - y);
+    });
+  });
 }
 
 /***/ }),
@@ -1261,6 +1293,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_contactFormModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/contactFormModule */ "./src/js/contactFormModule.js");
 /* harmony import */ var _js_webflowReq__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/webflowReq */ "./src/js/webflowReq.js");
 /* harmony import */ var _js_introScreen__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/introScreen */ "./src/js/introScreen.js");
+/* harmony import */ var _js_tiltCards__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/tiltCards */ "./src/js/tiltCards.js");
+
 
 
 
@@ -1276,36 +1310,12 @@ __webpack_require__.r(__webpack_exports__);
 (0,_js_images__WEBPACK_IMPORTED_MODULE_7__.setImages)();
 (0,_js_contactFormModule__WEBPACK_IMPORTED_MODULE_8__.initContactButtons)();
 (0,_js_introScreen__WEBPACK_IMPORTED_MODULE_10__.introScreen)();
+(0,_js_tiltCards__WEBPACK_IMPORTED_MODULE_11__.tiltCardsLogic)();
 if (typeof window === "undefined") {
   alert("JavaScript is disabled");
 } else {
   console.log("JavaScript is enabled");
 }
-const rootCanvas = document.querySelector("article");
-let cardEl = document.querySelector(".card");
-
-// Day & Nightmode
-
-const dayToggle = document.querySelector(".day");
-const nightToggle = document.querySelector(".night");
-dayToggle.onclick = function (e) {
-  rootCanvas.setAttribute("data-theme", "light");
-  dayToggle.classList.add("hidden");
-  nightToggle.classList.remove("hidden");
-};
-nightToggle.onclick = function (e) {
-  rootCanvas.setAttribute("data-theme", "dark");
-  dayToggle.classList.remove("hidden");
-  nightToggle.classList.add("hidden");
-};
-cardEl.addEventListener("mousemove", e => {
-  const {
-    x,
-    y
-  } = cardEl.getBoundingClientRect();
-  cardEl.style.setProperty("--x", e.clientX - x);
-  cardEl.style.setProperty("--y", e.clientY - y);
-});
 
 // // modals
 // function openModal(content) {

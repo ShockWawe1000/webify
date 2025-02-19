@@ -27,6 +27,8 @@ function createImageDiv(element, id , setClass )
 }
 
 function createGifDiv(element, id , setClass) {
+   
+    setTimeout(()=>{
     const svgObject = document.createElement("object");
     svgObject.id = "animated-svg";
     svgObject.type = "image/svg+xml";
@@ -40,6 +42,7 @@ function createGifDiv(element, id , setClass) {
 
     const parentElement = document.getElementById(id);
     parentElement.append(svgObject);
+},700)
 }
 
 function createMultipleImageDiv(element, id, setClass)
