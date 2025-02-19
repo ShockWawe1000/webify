@@ -56,7 +56,13 @@ module.exports = {
                 // More information here https://webpack.js.org/guides/asset-modules/
                 type: "asset",
             },
-            { test: /\.svg$/, loader: 'raw-loader' }
+
+            {
+                test: /\.svg$/,
+                use: "file-loader"
+            },
+            
+
         ],
     },
 

@@ -11,23 +11,23 @@
       
     </title>
     <meta
-      content="Discover Webify, a reliable and efficient subscription-based design service, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to design hiring frustrations and embrace the ease of getting high-quality designs on demand."
+      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
       name="description"
     />
     <meta
-      content="Empower Your Business with Hyperflow: The Subscription-Based Design Service You Need"
+      content="Empower Your Business with Webify: Websites & Branding custom tailored to you"
       property="og:title"
     />
     <meta
-      content="Discover Hyperflow, a reliable and efficient subscription-based design service, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to design hiring frustrations and embrace the ease of getting high-quality designs on demand."
+      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
       property="og:description"
     />
     <meta
-      content="Empower Your Business with Hyperflow: The Subscription-Based Design Service You Need"
+      content="Empower Your Business with Webify: Websites & Branding custom tailored to you"
       property="twitter:title"
     />
     <meta
-      content="Discover Hyperflow, a reliable and efficient subscription-based design service, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to design hiring frustrations and embrace the ease of getting high-quality designs on demand."
+      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
       property="twitter:description"
     />
     <meta property="og:type" content="website" />
@@ -54,7 +54,11 @@
 <script defer src="index.js"></script><link href="index.css" rel="stylesheet"></head>
 
 <div id="intro" class="introScreen">
+  <div id="loadingSvg">
+
+  </div>
   <div id="animatedLogo"></div>  
+ 
 </div>
 
 <div id="modalContainer" class="modal hidden">
@@ -132,7 +136,7 @@
    
                 target="_blank"
                 class="nav-link openContactModal hover-underline-animation left"
-                >Book a Call
+                >Contact Us
                 </a>
               <a href="/#plans" class="cta-button w-button">Get Started</a>
 
@@ -262,8 +266,19 @@
               <div class="vertical-spacing">
                 <div class="container">
                   <div class="features-section-wrap">
-                    <div class="margin-bottom-52" id="atWebifyTextContainer">
-                      <div class="max-830">
+                    <div  id="atWebifyTextContainer">
+                      <div id="atWebifyTextContainerLeft">
+                        <h2 
+                          class="features-h2"
+                        >
+                        At <span class="bold-span"> Webify</span>, we don't just build websites - we build 
+                        <span class="bold-span"> your online presence. </span>
+               
+           
+                        </h2>
+                      </div>
+
+                      <div class="max-830"  id="atWebifyTextContainerRight">
                         <h2
                           style="
                             -webkit-transform: translate3d(0, 50px, 0)
@@ -281,14 +296,11 @@
                           "
                           class="features-h2"
                         >
-                        At <span class="bold-span"> Webify</span>, we don't just build apps - we build 
-                        <span class="bold-span"> dreams. </span>
-                       You get a 
-                       <span class="bold-span"> personal team </span>
-                        assigned to your project. 
-                        This means no distractions, no split focus, and no excuses. 
-                        Just a streamlined process, clear communication, and 
-                        <span class="bold-span"> results you’ll be proud to show off.</span>
+                      
+                        Drop the headache of dealing with your online presence,
+                        and focus on your business. Our main goal is to build trust by giving you 
+                         <span class="bold-span"> results you will be proud to show off. </span>
+           
                         </h2>
                       </div>
                     </div>
@@ -308,31 +320,34 @@
                           transform: translate3d(0, 50px, 0) scale3d(1, 1, 1)
                             rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                         "
-                        class="features-cards-grid"
-                      >
+                        class="features-cards-grid"   >
+
+
+                        <article id="stage" data-theme="dark">
+
                         <div
                           id="w-node-c0b28c43-a49e-cfd1-8e7f-b6905a2a8308-7cbc531a"
-                          class="features-card"
-                        >
-                          <div class="margin-bottom-16">
-                            <div class="features-icon" id="teamImg">
-                          
-                            </div>
-                          </div>
-                          <div class="bottom-margin-4">
-                            <div class="max-200">
-                              <div><h3>Your Personal Team <ng-template #name></ng-template>
-                              </h3></div>
-                            </div>
-                          </div>
-                          <p>
-                            Designers, Developers and Marketing strategists working on your bringing your vision to reality
-                          </p>
+                          class="features-card card" data-tilt data-tilt-max="6" data-tilt-speed="40" data-tilt-perspective="700" >
+                                <div class="margin-bottom-16">
+                                  <div class="features-icon" id="teamImg"> </div>
+                                </div>
+                                <div class="bottom-margin-4">
+                                  <div class="max-200">
+                                    <div><h3>Your Personal Team <ng-template #name></ng-template> </h3></div>
+                                  </div>
+                                </div>
+                                <p>
+                                  Designers, Developers and Marketing strategists working on your bringing your vision to reality
+                                </p>
+                              <div class="glow"></div>
                         </div>
+                        
+                      </article>
+
+                      <article id="stage" data-theme="dark">
                         <div
                           id="w-node-_7ea39219-c93f-abb9-9f3d-bffe7ada5611-7cbc531a"
-                          class="features-card"
-                        >
+                          class="features-card card" data-tilt data-tilt-max="6" data-tilt-speed="40" data-tilt-perspective="700" >
                           <div class="margin-bottom-16">
                             <div class="features-icon">
                               <img
@@ -351,11 +366,15 @@
                           <p>
                             The website will be live and ready before you get to say "Webify"
                           </p>
+                          <div class="glow"></div>
                         </div>
+                      
+                      </article>
+
+                      <article id="stage" data-theme="dark">
                         <div
                           id="w-node-c2bf7dda-edc4-c033-92cc-6dc11c322a37-7cbc531a"
-                          class="features-card"
-                        >
+                          class="features-card card" data-tilt data-tilt-max="6" data-tilt-speed="40" data-tilt-perspective="700" >
                           <div class="margin-bottom-16">
                             <div class="features-icon">
                               <img
@@ -375,25 +394,31 @@
                             Receive designs within a few business days; Monday
                             to Friday.
                           </p>
+                          <div class="glow"></div>
                         </div>
+                       
+                      </article>
+                      
+                      <article id="stage" data-theme="dark">
                         <div
                         id="w-node-_7ea39219-c93f-abb9-9f3d-bffe7ada5611-7cbc531a"
-                        class="features-card"
-                      >
-                        <div class="margin-bottom-16">
-                          <div class="features-icon" id="refundImg">
-                        
-                          </div>
-                        </div>
-                        <div class="bottom-margin-4">
-                          <div class="max-200">
-                            <h3>Money Back Guarantee</h3>
-                          </div>
-                        </div>
-                        <p>
-                          If your website isn't wowing everyone who visits it and isnt performing well, you get your deposit back.
-                        </p>
+                        class="features-card card" data-tilt data-tilt-max="6" data-tilt-speed="40" data-tilt-perspective="700" >
+                            <div class="margin-bottom-16">
+                              <div class="features-icon" id="refundImg"></div>
+                            </div>
+                            <div class="bottom-margin-4">
+                              <div class="max-200">
+                                <h3>Money Back Guarantee</h3>
+                              </div>
+                            </div>
+                          <p>
+                            If your website isn't wowing everyone who visits it and isnt performing well, you get your deposit back.
+                          </p>
+                          <div class="glow"></div>
                       </div>
+                     
+                    </article>
+
                       </div>
                     </div>
                   </div>
@@ -2492,7 +2517,9 @@
                          <span>CONTACT</span>
                          <span>US</span>
                        </div>
-                       <div class="app-contact">CONTACT : +389 71 878 598</div>
+                       <div class="app-contact">CONTACT : +389 71 878 598
+                        <br>webify.macedonia@gmail.com
+                       </div>
                      </div>
                      <div class="screen-body-item">
 

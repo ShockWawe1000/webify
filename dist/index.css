@@ -233,7 +233,18 @@ a,
 }
 
 #atWebifyTextContainer {
-  margin-left: 50%;
+  display: flex;
+  gap: 150px;
+  margin-bottom: 50px;
+}
+
+#atWebifyTextContainerLeft {
+  width: 50%;
+}
+
+#atWebifyTextContainerRight {
+  padding-top: 120px;
+  width: 50%;
 }
 
 .webifyLogo {
@@ -250,7 +261,7 @@ a,
 
 .introScreen {
   position: fixed;
-  z-index: 1000;
+  z-index: 97;
   top: 0px;
   right: 0px;
   height: 100vh;
@@ -264,33 +275,55 @@ a,
 
 #animatedLogo {
   width: 30%;
-  z-index: 1001;
+  z-index: 98;
 }
 
-.introScreen.active {
-  bottom: 0;
-  opacity: 1;
-  transition: ease-in-out 0.5s;
+#loadingSvg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  object-fit: cover;
 }
 
-.introScreen.fade {
-  bottom: 150px;
-  opacity: 0;
-  transition: ease-in-out 0.5s;
+.transition {
+  z-index: 99;
 }
 
+.features-card {
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+}
+
+@media (max-width: 1024px) {
+  #animated-svg {
+    transform: scale(1.4); /* Zoom in more on smaller screens */
+  }
+}
 @media screen and (max-width: 991px) {
   .hide,
   .hide-tablet {
     display: none !important;
   }
+  #atWebifyTextContainerLeft {
+    width: 100%;
+  }
+  #atWebifyTextContainerRight {
+    padding-top: 0;
+    width: 100%;
+  }
   #atWebifyTextContainer {
     margin-left: 0%;
+    flex-direction: column;
+    gap: 0px;
   }
 }
 @media screen and (max-width: 800px) {
   .hide-mobile-landscape {
     display: none !important;
+  }
+  #animated-svg {
+    transform: scale(2); /* Zoom in more on smaller screens */
   }
 }
 @media screen and (max-width: 479px) {
@@ -4385,6 +4418,36 @@ a {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+.card {
+  overflow: hidden;
+  transition: 4s transform ease-in-out, background-color ease-in-out;
+  height: 248px;
+}
+
+.card:hover {
+  transform: rotate3d(1, 1, 0, 10deg);
+}
+
+.glow {
+  width: 350px;
+  height: 350px;
+  background-color: #f6be8a;
+  filter: blur(180px);
+  border-radius: 300px;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: soft-light;
+  will-change: transform;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  z-index: -2;
+}
+
+.card:hover .glow {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=index.css.map*/

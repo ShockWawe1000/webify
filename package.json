@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@babel/preset-env": "^7.12.17",
+    "@svgr/webpack": "^8.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^7.1.2",
@@ -30,6 +31,7 @@
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^8.0.0",
     "webpack": "^5.23.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
@@ -40,6 +42,7 @@
     "restourant": "file:",
     "sanitize.css": "^12.0.1",
     "simplex-noise": "^4.0.3",
+    "vanilla-tilt": "^1.8.1",
     "webify": "file:"
   },
   "resolutions": {

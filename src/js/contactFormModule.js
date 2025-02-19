@@ -28,7 +28,9 @@ function openContactModal() {
             <span>CONTACT</span>
             <span>US</span>
           </div>
-          <div class="app-contact">CONTACT : +389 71 878 598</div>
+          <div class="app-contact">CONTACT : +389 71 878 598
+            <br>webify.macedonia@gmail.com
+            </div>
         </div>
         <div class="screen-body-item">
           <form id="formModal" class="app-form" method="POST">

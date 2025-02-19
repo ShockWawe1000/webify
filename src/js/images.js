@@ -10,6 +10,7 @@ import logo222 from "../image/logo222.svg"
 import refund from "../image/refund.svg"
 import team from "../image/team.svg"
 import webify_logo from "../image/webify_logo.svg"
+import transition from "../image/load_animation.svg"
 
 import animated_logo from "../image/intro.gif"
 
@@ -25,15 +26,20 @@ function createImageDiv(element, id , setClass )
 
 }
 
-function createGifDiv(element, id , setClass )
-{
-    const elementSvg = document.createElement('div');
+function createGifDiv(element, id , setClass) {
+    const svgObject = document.createElement("object");
+    svgObject.id = "animated-svg";
+    svgObject.type = "image/svg+xml";
+    svgObject.data = element;
+    svgObject.classList.add(setClass);
+    svgObject.style.width = "100vw";  // Make it fit the screen horizontally
+    svgObject.style.height = "100vh"; // Make it fit the screen vertically
+    svgObject.style.position = "absolute"; // Position it absolutely within the container
+    svgObject.style.top = "0"; // Align to the top of the parent container
+    svgObject.style.left = "0"; // Align to the left of the parent container
 
-    elementSvg.innerHTML = element;
-
-    var parentElement = document.getElementById(id)
-    parentElement.append(elementSvg)
-
+    const parentElement = document.getElementById(id);
+    parentElement.append(svgObject);
 }
 
 function createMultipleImageDiv(element, id, setClass)
@@ -65,5 +71,9 @@ export function setImages(){
 
     createImageDiv(webify_logo, "webifyLogoImg2", "webifyLogo")
     createImageDiv(animated_logo, "animatedLogo", "animatedLogo")
+    createGifDiv(transition, "loadingSvg", "transition")
+
+
+    
     // window.onload= createMultipleImageDiv(project,".projectImg");
 }
