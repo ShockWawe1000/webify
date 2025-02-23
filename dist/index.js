@@ -235,9 +235,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_logo222_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../image/logo222.svg */ "./src/image/logo222.svg");
 /* harmony import */ var _image_refund_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../image/refund.svg */ "./src/image/refund.svg");
 /* harmony import */ var _image_team_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../image/team.svg */ "./src/image/team.svg");
-/* harmony import */ var _image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../image/webify_logo.svg */ "./src/image/webify_logo.svg");
-/* harmony import */ var _image_load_animation_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../image/load_animation.svg */ "./src/image/load_animation.svg");
-/* harmony import */ var _image_intro_gif__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../image/intro.gif */ "./src/image/intro.gif");
+/* harmony import */ var _image_crown_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../image/crown.svg */ "./src/image/crown.svg");
+/* harmony import */ var _image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../image/webify_logo.svg */ "./src/image/webify_logo.svg");
+/* harmony import */ var _image_load_animation_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../image/load_animation.svg */ "./src/image/load_animation.svg");
+/* harmony import */ var _image_products_big_webp__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../image/products/big.webp */ "./src/image/products/big.webp");
+/* harmony import */ var _image_products_long1_webp__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../image/products/long1.webp */ "./src/image/products/long1.webp");
+/* harmony import */ var _image_products_long2_webp__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../image/products/long2.webp */ "./src/image/products/long2.webp");
+/* harmony import */ var _image_products_long3_webp__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../image/products/long3.webp */ "./src/image/products/long3.webp");
+/* harmony import */ var _image_products_square1_webp__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../image/products/square1.webp */ "./src/image/products/square1.webp");
+/* harmony import */ var _image_products_square2_webp__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../image/products/square2.webp */ "./src/image/products/square2.webp");
+/* harmony import */ var _image_intro_gif__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../image/intro.gif */ "./src/image/intro.gif");
 
 
 
@@ -251,14 +258,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function createImageDiv(element, id, setClass) {
-  const tempImg = new Image();
-  tempImg.src = element;
-  tempImg.classList.add(setClass);
-  tempImg.setAttribute('loading', 'lazy');
-  tempImg.setAttribute('alt', id);
-  var parentElement = document.getElementById(id);
-  parentElement.append(tempImg);
+
+
+
+
+
+
+
+function createImageDiv(element, id, setClass, sizes) {
+  if (document.getElementById(id)) {
+    const tempImg = new Image();
+    tempImg.src = element;
+    tempImg.classList.add(setClass);
+    tempImg.setAttribute('loading', 'lazy');
+    tempImg.setAttribute('alt', id);
+    if (sizes) {
+      tempImg.setAttribute('sizes', sizes);
+    }
+    var parentElement = document.getElementById(id);
+    parentElement.append(tempImg);
+  } else console.log("ID doest exist:" + id);
 }
 function createGifDiv(element, id, setClass) {
   setTimeout(() => {
@@ -286,17 +305,25 @@ function createMultipleImageDiv(element, id, setClass) {
   });
 }
 function setImages() {
-  createImageDiv(_image_binance_png__WEBPACK_IMPORTED_MODULE_0__, "binanceImg", "image-100");
-  createImageDiv(_image_moonpay_png__WEBPACK_IMPORTED_MODULE_5__, "moonpayImg", "image-100");
-  createImageDiv(_image_btc_png__WEBPACK_IMPORTED_MODULE_1__, "btcImg", "image-100");
-  createImageDiv(_image_sol_png__WEBPACK_IMPORTED_MODULE_3__, "solImg", "image-100");
-  createImageDiv(_image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_10__["default"], "webify_logo", "webifyLogo");
+  //    createImageDiv(binance, "binanceImg", "image-100")
+  //    createImageDiv(moonpay, "moonpayImg", "image-100")
+  //    createImageDiv(btc, "btcImg", "image-100")
+  //    createImageDiv(sol, "solImg", "image-100")
+
+  createImageDiv(_image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_11__["default"], "webify_logo", "webifyLogo");
   createImageDiv(_image_team_svg__WEBPACK_IMPORTED_MODULE_9__["default"], "teamImg", "image-100");
   createImageDiv(_image_refund_svg__WEBPACK_IMPORTED_MODULE_8__["default"], "refundImg", "image-100");
   createImageDiv(_image_trustpilot_png__WEBPACK_IMPORTED_MODULE_4__, "trustpilotImg", "image-100");
-  createImageDiv(_image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_10__["default"], "webifyLogoImg2", "webifyLogo");
-  createImageDiv(_image_intro_gif__WEBPACK_IMPORTED_MODULE_12__, "animatedLogo", "animatedLogo");
-  createGifDiv(_image_load_animation_svg__WEBPACK_IMPORTED_MODULE_11__["default"], "loadingSvg", "transition");
+  createImageDiv(_image_crown_svg__WEBPACK_IMPORTED_MODULE_10__["default"], "crownImg", "image-100");
+  createImageDiv(_image_webify_logo_svg__WEBPACK_IMPORTED_MODULE_11__["default"], "webifyLogoImg2", "webifyLogo");
+  createImageDiv(_image_intro_gif__WEBPACK_IMPORTED_MODULE_19__, "animatedLogo", "animatedLogo");
+  createImageDiv(_image_products_big_webp__WEBPACK_IMPORTED_MODULE_13__, "bigProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw");
+  createImageDiv(_image_products_long1_webp__WEBPACK_IMPORTED_MODULE_14__, "long1ProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw");
+  createImageDiv(_image_products_long2_webp__WEBPACK_IMPORTED_MODULE_15__, "long2ProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw");
+  createImageDiv(_image_products_long3_webp__WEBPACK_IMPORTED_MODULE_16__, "long3ProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw");
+  createImageDiv(_image_products_square1_webp__WEBPACK_IMPORTED_MODULE_17__, "square1ProductShowcase", "image-100", "(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw");
+  createImageDiv(_image_products_square2_webp__WEBPACK_IMPORTED_MODULE_18__, "square2ProdProductShowcase", "image-100", "(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw");
+  createGifDiv(_image_load_animation_svg__WEBPACK_IMPORTED_MODULE_12__["default"], "loadingSvg", "transition");
 
   // window.onload= createMultipleImageDiv(project,".projectImg");
 }
@@ -336,6 +363,233 @@ function introScreen() {
     });
   }
 }
+
+/***/ }),
+
+/***/ "./src/js/languagePicker.js":
+/*!**********************************!*\
+  !*** ./src/js/languagePicker.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   initLanguagePicker: () => (/* binding */ initLanguagePicker)
+/* harmony export */ });
+// utility functions
+var Util = Util || function () {};
+Util.addClass = function (el, className) {
+  var classList = className.split(' ');
+  el.classList.add(classList[0]);
+  if (classList.length > 1) Util.addClass(el, classList.slice(1).join(' '));
+};
+Util.removeClass = function (el, className) {
+  var classList = className.split(' ');
+  el.classList.remove(classList[0]);
+  if (classList.length > 1) Util.removeClass(el, classList.slice(1).join(' '));
+};
+Util.toggleClass = function (el, className, bool) {
+  if (bool) Util.addClass(el, className);else Util.removeClass(el, className);
+};
+Util.moveFocus = function (element) {
+  if (!element) element = document.getElementsByTagName('body')[0];
+  element.focus();
+  if (document.activeElement !== element) {
+    element.setAttribute('tabindex', '-1');
+    element.focus();
+  }
+};
+Util.getIndexInArray = function (array, el) {
+  return Array.prototype.indexOf.call(array, el);
+};
+
+// File#: _1_language-picker
+// Usage: codyhouse.co/license
+function initLanguagePicker() {
+  var LanguagePicker = function (element) {
+    this.element = element;
+    this.select = this.element.getElementsByTagName('select')[0];
+    this.options = this.select.getElementsByTagName('option');
+    this.selectedOption = getSelectedOptionText(this);
+    this.pickerId = this.select.getAttribute('id');
+    this.trigger = false;
+    this.dropdown = false;
+    this.firstLanguage = false;
+    // dropdown arrow inside the button element
+    this.arrowSvgPath = '<svg viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>';
+    this.globeSvgPath = '<svg viewBox="0 0 16 16"><path d="M8,0C3.6,0,0,3.6,0,8s3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M13.9,7H12c-0.1-1.5-0.4-2.9-0.8-4.1 C12.6,3.8,13.6,5.3,13.9,7z M8,14c-0.6,0-1.8-1.9-2-5H10C9.8,12.1,8.6,14,8,14z M6,7c0.2-3.1,1.3-5,2-5s1.8,1.9,2,5H6z M4.9,2.9 C4.4,4.1,4.1,5.5,4,7H2.1C2.4,5.3,3.4,3.8,4.9,2.9z M2.1,9H4c0.1,1.5,0.4,2.9,0.8,4.1C3.4,12.2,2.4,10.7,2.1,9z M11.1,13.1 c0.5-1.2,0.7-2.6,0.8-4.1h1.9C13.6,10.7,12.6,12.2,11.1,13.1z"></path></svg>';
+    initLanguagePicker(this);
+    initLanguagePickerEvents(this);
+  };
+  function initLanguagePicker(picker) {
+    // create the HTML for the custom dropdown element
+    picker.element.insertAdjacentHTML('beforeend', initButtonPicker(picker) + initListPicker(picker));
+
+    // save picker elements
+    picker.dropdown = picker.element.getElementsByClassName('language-picker__dropdown')[0];
+    picker.languages = picker.dropdown.getElementsByClassName('language-picker__item');
+    picker.firstLanguage = picker.languages[0];
+    picker.trigger = picker.element.getElementsByClassName('language-picker__button')[0];
+  }
+  ;
+  function initLanguagePickerEvents(picker) {
+    // make sure to add the icon class to the arrow dropdown inside the button element
+    var svgs = picker.trigger.getElementsByTagName('svg');
+    Util.addClass(svgs[0], 'li4-icon');
+    Util.addClass(svgs[1], 'li4-icon');
+    // language selection in dropdown
+    // ⚠️ Important: you need to modify this function in production
+    initLanguageSelection(picker);
+
+    // click events
+    picker.trigger.addEventListener('click', function () {
+      toggleLanguagePicker(picker, false);
+    });
+    // keyboard navigation
+    picker.dropdown.addEventListener('keydown', function (event) {
+      if (event.keyCode && event.keyCode == 38 || event.key && event.key.toLowerCase() == 'arrowup') {
+        keyboardNavigatePicker(picker, 'prev');
+      } else if (event.keyCode && event.keyCode == 40 || event.key && event.key.toLowerCase() == 'arrowdown') {
+        keyboardNavigatePicker(picker, 'next');
+      }
+    });
+  }
+  ;
+  function toggleLanguagePicker(picker, bool) {
+    var ariaExpanded;
+    if (bool) {
+      ariaExpanded = bool;
+    } else {
+      ariaExpanded = picker.trigger.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+    }
+    picker.trigger.setAttribute('aria-expanded', ariaExpanded);
+    if (ariaExpanded == 'true') {
+      picker.firstLanguage.focus(); // fallback if transition is not supported
+      picker.dropdown.addEventListener('transitionend', function cb() {
+        picker.firstLanguage.focus();
+        picker.dropdown.removeEventListener('transitionend', cb);
+      });
+      // place dropdown
+      placeDropdown(picker);
+    }
+  }
+  ;
+  function placeDropdown(picker) {
+    var triggerBoundingRect = picker.trigger.getBoundingClientRect();
+    Util.toggleClass(picker.dropdown, 'language-picker__dropdown--right', window.innerWidth < triggerBoundingRect.left + picker.dropdown.offsetWidth);
+    Util.toggleClass(picker.dropdown, 'language-picker__dropdown--up', window.innerHeight < triggerBoundingRect.bottom + picker.dropdown.offsetHeight);
+  }
+  ;
+  function checkLanguagePickerClick(picker, target) {
+    // if user clicks outside the language picker -> close it
+    if (!picker.element.contains(target)) toggleLanguagePicker(picker, 'false');
+  }
+  ;
+  function moveFocusToPickerTrigger(picker) {
+    if (picker.trigger.getAttribute('aria-expanded') == 'false') return;
+    if (document.activeElement.closest('.language-picker__dropdown') == picker.dropdown) picker.trigger.focus();
+  }
+  ;
+  function initButtonPicker(picker) {
+    // create the button element -> picker trigger
+    // check if we need to add custom classes to the button trigger
+    var customClasses = picker.element.getAttribute('data-trigger-class') ? ' ' + picker.element.getAttribute('data-trigger-class') : '';
+    var button = '<button class="language-picker__button' + customClasses + '" aria-label="' + picker.select.value + ' ' + picker.element.getElementsByTagName('label')[0].textContent + '" aria-expanded="false" aria-controls="' + picker.pickerId + '-dropdown">';
+    button = button + '<span aria-hidden="true" class="language-picker__label language-picker__flag language-picker__flag--' + picker.select.value + '">' + picker.globeSvgPath + '<em>' + picker.selectedOption + '</em>';
+    button = button + picker.arrowSvgPath + '</span>';
+    return button + '</button>';
+  }
+  ;
+  function initListPicker(picker) {
+    // create language picker dropdown
+    var list = '<div class="language-picker__dropdown" aria-describedby="' + picker.pickerId + '-description" id="' + picker.pickerId + '-dropdown">';
+    list = list + '<p class="li4-sr-only" id="' + picker.pickerId + '-description">' + picker.element.getElementsByTagName('label')[0].textContent + '</p>';
+    list = list + '<ul class="language-picker__list" role="listbox">';
+    for (var i = 0; i < picker.options.length; i++) {
+      var selected = picker.options[i].selected ? ' aria-selected="true"' : '',
+        language = picker.options[i].getAttribute('lang');
+      list = list + '<li><a lang="' + language + '" hreflang="' + language + '" href="' + getLanguageUrl(picker.options[i]) + '"' + selected + ' role="option" data-value="' + picker.options[i].value + '" class="language-picker__item language-picker__flag language-picker__flag--' + picker.options[i].value + '"><span>' + picker.options[i].text + '</span></a></li>';
+    }
+    ;
+    return list;
+  }
+  ;
+  function getSelectedOptionText(picker) {
+    // used to initialize the label of the picker trigger button
+    var label = '';
+    if ('selectedIndex' in picker.select) {
+      label = picker.options[picker.select.selectedIndex].text;
+    } else {
+      label = picker.select.querySelector('option[selected]').text;
+    }
+    return label;
+  }
+  ;
+  function getLanguageUrl(option) {
+    // ⚠️ Important: You should replace this return value with the real link to your website in the selected language
+    // option.value gives you the value of the language that you can use to create your real url (e.g, 'english' or 'italiano')
+    return '#';
+  }
+  ;
+  function initLanguageSelection(picker) {
+    picker.element.getElementsByClassName('language-picker__list')[0].addEventListener('click', function (event) {
+      var language = event.target.closest('.language-picker__item');
+      if (!language) return;
+      if (language.hasAttribute('aria-selected') && language.getAttribute('aria-selected') == 'true') {
+        // selecting the same language
+        event.preventDefault();
+        picker.trigger.setAttribute('aria-expanded', 'false'); // hide dropdown
+      } else {
+        // ⚠️ Important: this 'else' code needs to be removed in production. 
+        // The user has to be redirected to the new url -> nothing to do here
+        event.preventDefault();
+        picker.element.getElementsByClassName('language-picker__list')[0].querySelector('[aria-selected="true"]').removeAttribute('aria-selected');
+        language.setAttribute('aria-selected', 'true');
+        picker.trigger.getElementsByClassName('language-picker__label')[0].setAttribute('class', 'language-picker__label language-picker__flag language-picker__flag--' + language.getAttribute('data-value'));
+        picker.trigger.getElementsByClassName('language-picker__label')[0].getElementsByTagName('em')[0].textContent = language.textContent;
+        picker.trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  ;
+  function keyboardNavigatePicker(picker, direction) {
+    var index = Util.getIndexInArray(picker.languages, document.activeElement);
+    index = direction == 'next' ? index + 1 : index - 1;
+    if (index < 0) index = picker.languages.length - 1;
+    if (index >= picker.languages.length) index = 0;
+    Util.moveFocus(picker.languages[index]);
+  }
+  ;
+
+  //initialize the LanguagePicker objects
+  var languagePicker = document.getElementsByClassName('js-language-picker');
+  if (languagePicker.length > 0) {
+    var pickerArray = [];
+    for (var i = 0; i < languagePicker.length; i++) {
+      (function (i) {
+        pickerArray.push(new LanguagePicker(languagePicker[i]));
+      })(i);
+    }
+
+    // listen for key events
+    window.addEventListener('keyup', function (event) {
+      if (event.keyCode && event.keyCode == 27 || event.key && event.key.toLowerCase() == 'escape') {
+        // close language picker on 'Esc'
+        pickerArray.forEach(function (element) {
+          moveFocusToPickerTrigger(element); // if focus is within dropdown, move it to dropdown trigger
+          toggleLanguagePicker(element, 'false'); // close dropdown
+        });
+      }
+    });
+    // close language picker when clicking outside it
+    window.addEventListener('click', function (event) {
+      pickerArray.forEach(function (element) {
+        checkLanguagePickerClick(element, event.target);
+      });
+    });
+  }
+}
+;
 
 /***/ }),
 
@@ -436,6 +690,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/image/crown.svg":
+/*!*****************************!*\
+  !*** ./src/image/crown.svg ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "780c5da1adac23fa4347ee46eb6f43d6.svg");
+
+/***/ }),
+
 /***/ "./src/image/load_animation.svg":
 /*!**************************************!*\
   !*** ./src/image/load_animation.svg ***!
@@ -518,6 +786,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/css/gradientCards.css":
+/*!***********************************!*\
+  !*** ./src/css/gradientCards.css ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/css/modal.css":
 /*!***************************!*\
   !*** ./src/css/modal.css ***!
@@ -534,6 +814,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************!*\
   !*** ./src/css/modalAnimations.css ***!
   \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/css/pricing.css":
+/*!*****************************!*\
+  !*** ./src/css/pricing.css ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1151,6 +1443,66 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+
 
 /***/ }),
 
+/***/ "./src/image/products/big.webp":
+/*!*************************************!*\
+  !*** ./src/image/products/big.webp ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "b8270b95557d6e1f66c7.webp";
+
+/***/ }),
+
+/***/ "./src/image/products/long1.webp":
+/*!***************************************!*\
+  !*** ./src/image/products/long1.webp ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "d4228f5076ca9b6cd66b.webp";
+
+/***/ }),
+
+/***/ "./src/image/products/long2.webp":
+/*!***************************************!*\
+  !*** ./src/image/products/long2.webp ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "0faf5cd1119f8ab2c38d.webp";
+
+/***/ }),
+
+/***/ "./src/image/products/long3.webp":
+/*!***************************************!*\
+  !*** ./src/image/products/long3.webp ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "535b4373b4d41423a720.webp";
+
+/***/ }),
+
+/***/ "./src/image/products/square1.webp":
+/*!*****************************************!*\
+  !*** ./src/image/products/square1.webp ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "363dc10fe4b911973fd0.webp";
+
+/***/ }),
+
+/***/ "./src/image/products/square2.webp":
+/*!*****************************************!*\
+  !*** ./src/image/products/square2.webp ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "0264b6414c8cb0a316b7.webp";
+
+/***/ }),
+
 /***/ "./src/image/sol.png":
 /*!***************************!*\
   !*** ./src/image/sol.png ***!
@@ -1281,19 +1633,22 @@ var __webpack_exports__ = {};
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_webflow_required_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/webflow-required-styles.css */ "./src/css/webflow-required-styles.css");
-/* harmony import */ var _css_contactForm_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/contactForm.css */ "./src/css/contactForm.css");
-/* harmony import */ var _css_modal_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/modal.css */ "./src/css/modal.css");
-/* harmony import */ var _css_modalAnimations_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/modalAnimations.css */ "./src/css/modalAnimations.css");
-/* harmony import */ var _css_webflow_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/webflow.css */ "./src/css/webflow.css");
-/* harmony import */ var _css_tiltingCards_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/tiltingCards.css */ "./src/css/tiltingCards.css");
-/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vanilla-tilt */ "./node_modules/vanilla-tilt/lib/vanilla-tilt.js");
-/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vanilla_tilt__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _js_images__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./js/images */ "./src/js/images.js");
-/* harmony import */ var _js_contactFormModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./js/contactFormModule */ "./src/js/contactFormModule.js");
-/* harmony import */ var _js_webflowReq__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/webflowReq */ "./src/js/webflowReq.js");
-/* harmony import */ var _js_introScreen__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/introScreen */ "./src/js/introScreen.js");
-/* harmony import */ var _js_tiltCards__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/tiltCards */ "./src/js/tiltCards.js");
+/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vanilla-tilt */ "./node_modules/vanilla-tilt/lib/vanilla-tilt.js");
+/* harmony import */ var vanilla_tilt__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vanilla_tilt__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_webflow_required_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/webflow-required-styles.css */ "./src/css/webflow-required-styles.css");
+/* harmony import */ var _css_contactForm_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/contactForm.css */ "./src/css/contactForm.css");
+/* harmony import */ var _css_modal_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/modal.css */ "./src/css/modal.css");
+/* harmony import */ var _css_modalAnimations_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/modalAnimations.css */ "./src/css/modalAnimations.css");
+/* harmony import */ var _css_webflow_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/webflow.css */ "./src/css/webflow.css");
+/* harmony import */ var _css_tiltingCards_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./css/tiltingCards.css */ "./src/css/tiltingCards.css");
+/* harmony import */ var _css_gradientCards_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./css/gradientCards.css */ "./src/css/gradientCards.css");
+/* harmony import */ var _css_pricing_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./css/pricing.css */ "./src/css/pricing.css");
+/* harmony import */ var _js_images__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./js/images */ "./src/js/images.js");
+/* harmony import */ var _js_contactFormModule__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./js/contactFormModule */ "./src/js/contactFormModule.js");
+/* harmony import */ var _js_webflowReq__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./js/webflowReq */ "./src/js/webflowReq.js");
+/* harmony import */ var _js_introScreen__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./js/introScreen */ "./src/js/introScreen.js");
+/* harmony import */ var _js_tiltCards__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./js/tiltCards */ "./src/js/tiltCards.js");
+/* harmony import */ var _js_languagePicker__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./js/languagePicker */ "./src/js/languagePicker.js");
 
 
 
@@ -1306,11 +1661,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_js_webflowReq__WEBPACK_IMPORTED_MODULE_9__.webflowInit)();
-(0,_js_images__WEBPACK_IMPORTED_MODULE_7__.setImages)();
-(0,_js_contactFormModule__WEBPACK_IMPORTED_MODULE_8__.initContactButtons)();
-(0,_js_introScreen__WEBPACK_IMPORTED_MODULE_10__.introScreen)();
-(0,_js_tiltCards__WEBPACK_IMPORTED_MODULE_11__.tiltCardsLogic)();
+
+
+
+(0,_js_webflowReq__WEBPACK_IMPORTED_MODULE_11__.webflowInit)();
+(0,_js_images__WEBPACK_IMPORTED_MODULE_9__.setImages)();
+(0,_js_contactFormModule__WEBPACK_IMPORTED_MODULE_10__.initContactButtons)();
+(0,_js_introScreen__WEBPACK_IMPORTED_MODULE_12__.introScreen)();
+(0,_js_tiltCards__WEBPACK_IMPORTED_MODULE_13__.tiltCardsLogic)();
 if (typeof window === "undefined") {
   alert("JavaScript is disabled");
 } else {

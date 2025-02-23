@@ -300,8 +300,3 @@ textarea::-webkit-scrollbar-thumb
       display: none;
     }
   }
-  p {
-    font-size: 15px;
-    font-weight: 350;
-  }
-  

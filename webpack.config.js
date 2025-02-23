@@ -52,7 +52,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(png|jpe?g|gif|eot|ttf|woff|woff2)$/i,
+                test: /\.(png|jpe?g|gif|eot|ttf|woff|woff2|webp)$/i,
                 // More information here https://webpack.js.org/guides/asset-modules/
                 type: "asset",
             },

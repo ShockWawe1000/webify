@@ -3180,6 +3180,7 @@ html {
   }
   
   .dotted-pattern-image {
+    margin-top: -300px  ;
     width: 100%;
     max-width: 592px;
   }
