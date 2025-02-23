@@ -9,13 +9,14 @@ import "./css/webflow.css"
 import "./css/tiltingCards.css"
 import "./css/gradientCards.css"
 import "./css/pricing.css"
+import "./css/languagePicker.css"
 
 import { setImages } from './js/images'
 import {initContactButtons } from "./js/contactFormModule"
 import {webflowInit} from "./js/webflowReq"
 import {introScreen} from "./js/introScreen"
 import {tiltCardsLogic} from "./js/tiltCards"
-import {initLanguagePicker} from "./js/languagePicker"
+
 
 webflowInit();
 setImages();
