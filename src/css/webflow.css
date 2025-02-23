@@ -3536,6 +3536,10 @@ html {
   }
   
   @media screen and (max-width: 767px) {
+    .responsiveHide{
+      display: none;
+    }
+  
     h1 {
       font-size: 80px;
     }
@@ -3620,7 +3624,7 @@ html {
     }
   
     .happe-grid {
-      grid-row-gap: 76px;
+      grid-row-gap: 16px;
       grid-template-columns: 1fr;
     }
   
@@ -3731,7 +3735,7 @@ html {
     }
   
     .heading-wrap {
-      height: 93px;
+      height: 86px;
     }
   
     .copyright-text, .footer-link {
@@ -3805,9 +3809,7 @@ html {
       padding-right: 20px;
     }
   
-    .price-card {
-      height: 360px;
-    }
+  
   
     .section_faq {
       position: relative;
@@ -3870,7 +3872,7 @@ html {
     }
   
     .heading-wrap {
-      height: 68px;
+      height: 62px;
     }
   
     .copyright-text, .footer-link {
