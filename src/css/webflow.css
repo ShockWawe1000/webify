@@ -2505,7 +2505,7 @@ html {
   }
   
   .brand {
-    width: 132px;
+    width: 100px;
     display: flex;
   }
   
@@ -3799,9 +3799,11 @@ html {
       background-color: rgba(15, 6, 23, .5);
     }
   
-    .nav-right {
+    .nav-right a {
       display: none;
     }
+
+
   
     .service-card.special {
       margin-left: -20px;

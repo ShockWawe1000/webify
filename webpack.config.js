@@ -81,8 +81,18 @@ module.exports = {
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         /*new CleanWebpackPlugin(),*/
         new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({
+          new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: SRC_DIR + "/index.html",
-        }),
+            inject: true,
+            chunks: ['index'],
+            filename: 'index.html'
+            }),
+            new HtmlWebpackPlugin({
+                template: './src/language/mk.html',
+                inject: true,
+                chunks: ['index'],
+                filename: 'mk.html'
+            }),
     ],
 };

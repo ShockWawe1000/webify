@@ -17,11 +17,10 @@ import {webflowInit} from "./js/webflowReq"
 import {introScreen} from "./js/introScreen"
 import {tiltCardsLogic} from "./js/tiltCards"
 
-
-webflowInit();
 setImages();
-initContactButtons();
 introScreen();
+webflowInit();
+initContactButtons();
 tiltCardsLogic()
 
 
@@ -33,25 +32,6 @@ if (typeof window === "undefined") {
 
 
 
-// // modals
-// function openModal(content) {
-//   const modal = document.getElementById("popup-modal");
-//   const modalContent = document.getElementById("modal-content");
-//   modalContent.innerHTML = content;
-
-//   modal.style.display = "flex";
-// }
-
-// document.getElementById("close-modal").addEventListener("click", function () {
-//   document.getElementById("popup-modal").style.display = "none";
-// });
-
-// document.querySelectorAll(".work-card").forEach(function (card) {
-//   card.addEventListener("click", function () {
-//     const img = card.querySelector("img");
-//     const content = `
-//       <img src="${img.src}" alt="Popup Image">
-//     `;
-//     openModal(content);
-//   });
-// });
+window.onbeforeunload = function (e) {
+    localStorage.clear();
+};

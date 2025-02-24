@@ -2,16 +2,29 @@ import binance from "../image/binance.png"
 import btc from "../image/btc.png"
 import eth from "../image/eth.png"
 import sol from "../image/sol.png"
-import trustpilot from "../image/trustpilot.png"
 import moonpay from "../image/moonpay.png"
+import trustpilot from "../image/trustpilot.png"
 
-import clutch from "../image/clutch.svg"
-import logo222 from "../image/logo222.svg"
-import refund from "../image/refund.svg"
-import team from "../image/team.svg"
-import crownImg from "../image/crown.svg"
+import clutchRating from "../image/clutch.svg"
+import favicon from "../image/favicon/favicon.png"
+import faviconL from "../image/favicon/faviconL.png"
 import webify_logo from "../image/webify_logo.svg"
 import transition from "../image/load_animation.svg"
+
+//CardIcons
+import cardIcon1 from "../image/element/cardIcon1.svg"
+import cardIcon2 from "../image/element/cardIcon2.svg"
+import cardIcon3 from "../image/element/cardIcon3.svg"
+import cardIcon4 from "../image/element/cardIcon4.svg"
+
+
+//Elements
+import linkedinIcon from "../image/element/linkedinIcon.svg"
+import buttonNext from "../image/element/buttonNext.svg"
+import rating5 from "../image/element/rating5.svg"
+import languageIcon from "../image/element/languageIcon.svg"
+
+
 
 import bigProductShowcase from "../image/products/big.webp"
 import long1ProductShowcase from "../image/products/long1.webp"
@@ -20,18 +33,56 @@ import long3ProductShowcase from "../image/products/long3.webp"
 import square1ProductShowcase from "../image/products/square1.webp"
 import square2ProdProductShowcase from "../image/products/square2.webp"
 
-import animated_logo from "../image/intro.gif"
 
-function createImageDiv(element, id , setClass ,sizes)
+import dots from "../image/bg/dots.svg"
+import dotsSmall from "../image/bg/dots2.svg"
+import line1 from "../image/bg/line1.svg"
+import line2 from "../image/bg/line2.svg"
+import line3 from "../image/bg/line3.svg"
+import line4 from "../image/bg/line4.svg"
+import line5 from "../image/bg/line5.svg"
+import line6 from "../image/bg/line6.svg"
+import line7 from "../image/bg/line7.svg"
+import line8 from "../image/bg/line8.svg"
+
+
+
+//import animated_logo_S from "../image/intro_webify_logo_S.gif"
+import webify_logo_animated from "../image/webify_logo_animated.svg"
+
+
+
+
+
+function setFavicon(srcs, rel, type) {
+        var link = document.createElement('link');
+        link.href = srcs;
+        link.rel = rel;
+        if(type){link.type = type} 
+      
+        document.head.appendChild(link);
+}
+
+
+
+
+function createImageDiv(element, id , setClass,loading ,sizes)
 {
     if (document.getElementById(id))
     {
         const tempImg = new Image();
         tempImg.src=  element
-        tempImg.classList.add(setClass)
-        tempImg.setAttribute('loading', 'lazy');
+        tempImg.classList.add(...setClass)
+        
         tempImg.setAttribute('alt', id);
+
+        if(loading)
+            { tempImg.setAttribute('loading', loading);}
+        else
+             { tempImg.setAttribute('loading', "lazy");}
+       
         if(sizes){ tempImg.setAttribute('sizes', sizes);}
+
         var parentElement = document.getElementById(id)
         parentElement.append(tempImg)
     
@@ -42,7 +93,7 @@ function createImageDiv(element, id , setClass ,sizes)
 
 }
 
-function createGifDiv(element, id , setClass) {
+function createLoadingSVG(element, id , setClass) {
    
     setTimeout(()=>{
     const svgObject = document.createElement("object");
@@ -61,53 +112,83 @@ function createGifDiv(element, id , setClass) {
 },700)
 }
 
-function createMultipleImageDiv(element, id, setClass)
-{
- 
 
-        document.querySelectorAll(id).forEach(
-            el => {    
-           
-                const tempImg = new Image();
-                tempImg.src = element;
-                tempImg.classList.add(setClass)
-                el.append(tempImg)
-           
-            }
-        );
-    
+function createLogoSVG(element, id , setClass) {
+   
+    setTimeout(()=>{
+    const svgObject = document.createElement("object");
+    svgObject.id = "animated-svg";
+    svgObject.type = "image/svg+xml";
+    svgObject.data = element;
+    svgObject.classList.add(...setClass);
+
+
+    const parentElement = document.getElementById(id);
+    parentElement.append(svgObject);
+},700)
 }
+
+
+
+
+
 
 export function setImages(){
 //    createImageDiv(binance, "binanceImg", "image-100")
 //    createImageDiv(moonpay, "moonpayImg", "image-100")
 //    createImageDiv(btc, "btcImg", "image-100")
 //    createImageDiv(sol, "solImg", "image-100")
+    setFavicon(favicon, "shortcut icon", "image/x-icon")
+    setFavicon(faviconL, "apple-touch-icon")
+    //logos
+    createImageDiv(webify_logo, "webify_logo",[ "webifyLogo"] , "lazy")
 
+    
+    createImageDiv(trustpilot, "trustpilotImg", ["image-100"] , "lazy")
+   
+    createImageDiv(webify_logo, "webifyLogoImg2", ["webifyLogo"] , "lazy")
+    //createImageDiv( animated_logo_S, "animatedLogo", "animatedLogo")
+   
+    //cardIcons
+    createImageDiv(cardIcon1, "cardIcon1", ["image-100"] , "lazy" )
+    createImageDiv(cardIcon2, "cardIcon2", ["image-100"] , "lazy" )
+    createImageDiv(cardIcon3, "cardIcon3", ["image-100"] , "lazy" )
+    createImageDiv(cardIcon4, "cardIcon4", ["image-100"] , "lazy" )
 
+    createImageDiv(linkedinIcon, "linkedinIcon", ["image-100"] , "lazy" )
 
-    createImageDiv(webify_logo, "webify_logo", "webifyLogo")
-    createImageDiv(team, "teamImg", "image-100")
-    createImageDiv(refund, "refundImg", "image-100")
-    createImageDiv(trustpilot, "trustpilotImg", "image-100")
-    createImageDiv(crownImg, "crownImg", "image-100")
-    createImageDiv(webify_logo, "webifyLogoImg2", "webifyLogo")
-    createImageDiv(animated_logo, "animatedLogo", "animatedLogo")
+    //products
+    createImageDiv(bigProductShowcase, "bigProductShowcase", ["image-100"], "lazy" , "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw" )
+    createImageDiv(long1ProductShowcase, "long1ProductShowcase", ["image-100"], "lazy" ,  "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
+    createImageDiv(long2ProductShowcase, "long2ProductShowcase", ["image-100"], "lazy" , "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
+    createImageDiv(long3ProductShowcase, "long3ProductShowcase", ["image-100"], "lazy" , "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
+    createImageDiv(square1ProductShowcase, "square1ProductShowcase", ["image-100"],  "lazy" ,  "(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
+    createImageDiv(square2ProdProductShowcase, "square2ProdProductShowcase" ,[ "image-100"],  "lazy","(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
+    
+    //loading screen
+    createLogoSVG(webify_logo_animated, "animatedLogo", ["animatedLogo"] , "eager")
+    createLoadingSVG(transition, "loadingSvg", ["transition"] , "eager" )
 
-    createImageDiv(bigProductShowcase, "bigProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw" )
-    createImageDiv(long1ProductShowcase, "long1ProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
-    createImageDiv(long2ProductShowcase, "long2ProductShowcase", "image-100", "(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
-    createImageDiv(long3ProductShowcase, "long3ProductShowcase", "image-100","(max-width: 479px) 92vw, (max-width: 767px) 93vw, 46vw")
-    createImageDiv(square1ProductShowcase, "square1ProductShowcase", "image-100", "(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
-    createImageDiv(square2ProdProductShowcase, "square2ProdProductShowcase", "image-100","(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
+    createImageDiv(buttonNext, "buttonNext1", ["image-100"] )
+    createImageDiv(buttonNext, "buttonNext2", ["image-100"] )
+    createImageDiv(buttonNext, "buttonNext3", ["image-100"] )
+    createImageDiv(buttonNext, "buttonNext4", ["image-100"] )
+    createImageDiv(buttonNext, "buttonNext5", ["image-100"] )
+    createImageDiv(rating5, "rating5", ["image-100"] )
+    createImageDiv(languageIcon, "languageIcon", ["languageIcon"] )
 
+    //bg
+    
+    createImageDiv(dots, "bg_dots1", ["image-100","cover"] )
+    createImageDiv(dotsSmall, "bg_dots2_right", ["image-100"] )
+    createImageDiv(dotsSmall, "bg_dots2_left", ["image-100"] )
 
-
-    createGifDiv(transition, "loadingSvg", "transition")
-
-
-
-
-
-    // window.onload= createMultipleImageDiv(project,".projectImg");
+    createImageDiv(line1, "bg_line1", ["pattern-image"] , "eager")
+    createImageDiv(line2, "bg_line2", ["image-100"] , "lazy")
+    createImageDiv(line3, "bg_line3", ["image-100"] , "lazy")
+    createImageDiv(line4, "bg_line4", ["image-100"] , "lazy")
+    createImageDiv(line5, "bg_line5", ["image-100"] , "lazy")
+    createImageDiv(line6, "bg_line6", ["image-100"] , "lazy")
+    createImageDiv(line7, "bg_line7", ["image-100"] , "lazy")
+    createImageDiv(line8, "bg_line8", ["image-100"] , "lazy")
 }
