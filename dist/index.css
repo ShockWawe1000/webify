@@ -439,7 +439,6 @@ a,
 
 button,
 input {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px;
 }
@@ -1005,7 +1004,6 @@ body {
   color: #333;
   background-color: #fff;
   margin: 0;
-  font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
@@ -2781,7 +2779,7 @@ textarea.w-input, textarea.w-select {
 body {
   background-color: var(--black);
   color: #fff;
-  font-family: Mundial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
   font-size: 18px;
   line-height: 1.66;
 }
@@ -2820,7 +2818,7 @@ h4 {
 
 p {
   margin-bottom: 10px;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.3;
 }
 

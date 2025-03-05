@@ -1,68 +1,132 @@
 import { contactFormLogic, contactFormLogicModal } from "./contactForm";
 
 const buttons = document.querySelectorAll(".openContactModal");
+const buttonsMk = document.querySelectorAll(".openContactModalMk");
 const modal = document.getElementById("modalContainer");
 const modalContent = document.getElementById("modalContent");
 
 let closeButton1, closeButton2;
 
 
-function openContactModal( message) {
-
-
-
-  const contactFormHTML = `
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <button data-pointer="hover" class="screen-header-button close" id="closeButton1"></button>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
+function openContactModal( message, lang) {
+var contactFormHTML;
+if (lang=="en")
+{
+  contactFormHTML = `
+  <div class="screen">
+    <div class="screen-header">
+      <div class="screen-header-left">
+        <button data-pointer="hover" class="screen-header-button close" id="closeButton1"></button>
+        <div class="screen-header-button maximize"></div>
+        <div class="screen-header-button minimize"></div>
       </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title" id="resultModal">
-            <span>CONTACT</span>
-            <span>US</span>
-          </div>
-          <div class="app-contact">CONTACT : +389 71 878 598
-            <br>webify.macedonia@gmail.com
-            </div>
-        </div>
-        <div class="screen-body-item">
-          <form id="formModal" class="app-form" method="POST">
-            <input type="hidden" name="access_key" value="40d910f7-a3af-41a9-a081-7323558c24e0">
-
-              <div class="app-form-group">
-                <input data-pointer="input" class="app-form-control"  name="name" placeholder="NAME"  autocomplete="given-name"  required>
-              </div>
-              
-              <div class="app-form-group">
-                <input data-pointer="input" class="app-form-control" name="email" placeholder="EMAIL" autocomplete="email"  required>
-              </div>
-              <div class="app-form-group">
-                <input data-pointer="input"  class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
-              </div>
-
-              <div class="app-form-group message">
-                <textarea data-pointer="input" class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
-              </div>
-            <div class="app-form-group buttons">
-              <button data-pointer="hover" type="button" class="app-form-button" id="closeButton2">CANCEL</button>
-              <button data-pointer="hover" type="submit" class="app-form-button">SEND</button>
-            </div>
-          </form>
-        </div>
+      <div class="screen-header-right">
+        <div class="screen-header-ellipsis"></div>
+        <div class="screen-header-ellipsis"></div>
+        <div class="screen-header-ellipsis"></div>
       </div>
     </div>
-    <div class="credits">designed by Webify</div>
-  `;
+    <div class="screen-body">
+      <div class="screen-body-item left">
+        <div class="app-title" id="resultModal">
+          <span>CONTACT</span>
+          <span>US</span>
+        </div>
+        <div class="app-contact">CONTACT : +389 71 878 598
+          <br>webify.macedonia@gmail.com
+          </div>
+      </div>
+      <div class="screen-body-item">
+        <form id="formModal" class="app-form" method="POST">
+          <input type="hidden" name="access_key" value="40d910f7-a3af-41a9-a081-7323558c24e0">
+
+            <div class="app-form-group">
+              <input data-pointer="input" class="app-form-control"  name="name" placeholder="NAME"  autocomplete="given-name"  required>
+            </div>
+            
+            <div class="app-form-group">
+              <input data-pointer="input" class="app-form-control" name="email" placeholder="EMAIL" autocomplete="email"  required>
+            </div>
+            <div class="app-form-group">
+              <input data-pointer="input"  class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
+            </div>
+
+            <div class="app-form-group message">
+              <textarea data-pointer="input" class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
+            </div>
+          <div class="app-form-group buttons">
+            <button data-pointer="hover" type="button" class="app-form-button" id="closeButton2">CANCEL</button>
+            <button data-pointer="hover" type="submit" class="app-form-button">SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="credits">designed by Webify</div>
+`;
+
+}
+else if (lang=="mk") 
+{
+
+  contactFormHTML = `
+  <div class="screen">
+    <div class="screen-header">
+      <div class="screen-header-left">
+        <button data-pointer="hover" class="screen-header-button close" id="closeButton1"></button>
+        <div class="screen-header-button maximize"></div>
+        <div class="screen-header-button minimize"></div>
+      </div>
+      <div class="screen-header-right">
+        <div class="screen-header-ellipsis"></div>
+        <div class="screen-header-ellipsis"></div>
+        <div class="screen-header-ellipsis"></div>
+      </div>
+    </div>
+    <div class="screen-body">
+      <div class="screen-body-item left">
+        <div class="app-title" id="resultModal">
+          <span>КОНТАКТИРАЈ</span>
+          <span>НЕ</span>
+        </div>
+        <div class="app-contact">КОНТАКТ : +389 71 878 598
+          <br>webify.macedonia@gmail.com
+          </div>
+      </div>
+      <div class="screen-body-item">
+        <form id="formModal" class="app-form" method="POST">
+          <input type="hidden" name="access_key" value="40d910f7-a3af-41a9-a081-7323558c24e0">
+
+            <div class="app-form-group">
+              <input data-pointer="input" class="app-form-control"  name="name" placeholder="ИМЕ-ПРЕЗИМЕ"  autocomplete="given-name"  required>
+            </div>
+            
+            <div class="app-form-group">
+              <input data-pointer="input" class="app-form-control" name="email" placeholder="ЕМАИЛ" autocomplete="email"  required>
+            </div>
+            <div class="app-form-group">
+              <input data-pointer="input"  class="app-form-control" name="number" placeholder="ТЕЛ. БРОЈЧЕ" autocomplete="tel"  >
+            </div>
+
+            <div class="app-form-group message">
+              <textarea data-pointer="input" class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
+            </div>
+          <div class="app-form-group buttons">
+            <button data-pointer="hover" type="button" class="app-form-button" id="closeButton2">CANCEL</button>
+            <button data-pointer="hover" type="submit" class="app-form-button">SEND</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="credits">designed by Webify</div>
+`;
+
+}
+
+
+
+
 
   modalContent.innerHTML = contactFormHTML;
 
@@ -124,14 +188,22 @@ export function initContactButtons(){
     const message = btn.dataset.message || "MESSAGE";
     btn.addEventListener("click", (event) => {
       
-        openContactModal(message);
+        openContactModal(message, "en");
       
     });
-
-
-    
   });
   
+  
+
+    buttons.forEach((btn) => {
+      const message = btn.dataset.message || "ПОРАКА";
+      btn.addEventListener("click", (event) => {
+        
+          openContactModal(message,"mk");
+        
+      });
+    });
+
   
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
