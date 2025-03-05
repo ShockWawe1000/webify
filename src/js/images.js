@@ -25,13 +25,24 @@ import rating5 from "../image/element/rating5.svg"
 import languageIcon from "../image/element/languageIcon.svg"
 
 
-
+//Products
 import bigProductShowcase from "../image/products/big.webp"
 import long1ProductShowcase from "../image/products/long1.webp"
 import long2ProductShowcase from "../image/products/long2.webp"
 import long3ProductShowcase from "../image/products/long3.webp"
 import square1ProductShowcase from "../image/products/square1.webp"
 import square2ProdProductShowcase from "../image/products/square2.webp"
+
+//Stats
+import graph1 from "../image/stats/graph1.webp"
+import graph2 from "../image/stats/graph2.webp"
+import graph3 from "../image/stats/graph3.webp"
+
+
+//ProcessImg
+import design from "../image/process/design.svg"
+import develop from "../image/process/develop.svg"
+import launch from "../image/process/launch.svg"
 
 
 import dots from "../image/bg/dots.svg"
@@ -42,7 +53,6 @@ import line3 from "../image/bg/line3.svg"
 import line4 from "../image/bg/line4.svg"
 import line5 from "../image/bg/line5.svg"
 import line6 from "../image/bg/line6.svg"
-import line7 from "../image/bg/line7.svg"
 import line8 from "../image/bg/line8.svg"
 
 
@@ -142,13 +152,16 @@ export function setImages(){
     setFavicon(faviconL, "apple-touch-icon")
     //logos
     createImageDiv(webify_logo, "webify_logo",[ "webifyLogo"] , "lazy")
-
-    
-    createImageDiv(trustpilot, "trustpilotImg", ["image-100"] , "lazy")
-   
     createImageDiv(webify_logo, "webifyLogoImg2", ["webifyLogo"] , "lazy")
+
+    var tempElement =  document.getElementById('trustpilotImg');
+    if (typeof(tempElement) != 'undefined' && tempElement != null)
+      {
+        
     //createImageDiv( animated_logo_S, "animatedLogo", "animatedLogo")
-   
+
+    createImageDiv(trustpilot, "trustpilotImg", ["image-100"] , "lazy")
+
     //cardIcons
     createImageDiv(cardIcon1, "cardIcon1", ["image-100"] , "lazy" )
     createImageDiv(cardIcon2, "cardIcon2", ["image-100"] , "lazy" )
@@ -165,6 +178,18 @@ export function setImages(){
     createImageDiv(square1ProductShowcase, "square1ProductShowcase", ["image-100"],  "lazy" ,  "(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
     createImageDiv(square2ProdProductShowcase, "square2ProdProductShowcase" ,[ "image-100"],  "lazy","(max-width: 479px) 44vw, (max-width: 767px) 45vw, 22vw")
     
+
+    //Stats
+
+    createImageDiv(graph1, "card-1", ["image-100", "carouselImage"] , "lazy" )
+    createImageDiv(graph2, "card-2", ["image-100", "carouselImage"] , "lazy" )
+    createImageDiv(graph3, "card-3", ["image-100", "carouselImage"] , "lazy" )
+
+    //ProcessImg
+    createImageDiv(design, "designImg", [  "processImg"] , "lazy" )
+    createImageDiv(develop, "developImg", [ "processImg"] , "lazy" )
+    createImageDiv(launch, "launchImg", [ "processImg"] , "lazy" )
+    
     //loading screen
     createLogoSVG(webify_logo_animated, "animatedLogo", ["animatedLogo"] , "eager")
     createLoadingSVG(transition, "loadingSvg", ["transition"] , "eager" )
@@ -179,7 +204,7 @@ export function setImages(){
 
     //bg
     
-    createImageDiv(dots, "bg_dots1", ["image-100","cover"] )
+    createImageDiv(dots, "bg_dots1", ["image-100","cover"] , "eager")
     createImageDiv(dotsSmall, "bg_dots2_right", ["image-100"] )
     createImageDiv(dotsSmall, "bg_dots2_left", ["image-100"] )
 
@@ -189,6 +214,6 @@ export function setImages(){
     createImageDiv(line4, "bg_line4", ["image-100"] , "lazy")
     createImageDiv(line5, "bg_line5", ["image-100"] , "lazy")
     createImageDiv(line6, "bg_line6", ["image-100"] , "lazy")
-    createImageDiv(line7, "bg_line7", ["image-100"] , "lazy")
     createImageDiv(line8, "bg_line8", ["image-100"] , "lazy")
+}
 }

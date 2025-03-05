@@ -265,14 +265,16 @@ textarea::-webkit-scrollbar-thumb
     color: var(--specialTextBtn);
 
     font-size: 14px;
-    cursor: pointer;
+    
     outline: none;
   }
   
   .app-form-button:hover {
     color: var(--specialTextHover);
   }
-  
+
+
+
   @media screen and (max-width: 670px) {
     .screen-body {
       flex-direction: column;

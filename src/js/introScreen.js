@@ -1,20 +1,6 @@
 
-
-
-
 export function introScreen(){
-   
-   
-// if(localStorage.getItem("loaded"))
-//     {
-//         localStorage.setItem("loaded", true);
-//     }
-//     else
-//     localStorage.setItem("loaded", false);
-//     console.log(localStorage.getItem("loaded"))
-
-
-
+  
     $(document).ready(function() {
         $(window).on("load", function() { 
 

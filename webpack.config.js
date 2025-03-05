@@ -68,7 +68,11 @@ module.exports = {
 
     devtool: "source-map",
 
-   
+    resolve: {
+        alias: {
+            jquery: "jquery/src/jquery"
+        }
+    },
 
     devServer: {
         contentBase: "./dist",
@@ -89,10 +93,16 @@ module.exports = {
             filename: 'index.html'
             }),
             new HtmlWebpackPlugin({
-                template: './src/language/mk.html',
+                template: './src/mk.html',
                 inject: true,
                 chunks: ['index'],
                 filename: 'mk.html'
+            }),
+            new HtmlWebpackPlugin({
+                template: './src/termsNconditions.html',
+                inject: true,
+                chunks: ['index'],
+                filename: 'termsNconditions.html'
             }),
     ],
 };

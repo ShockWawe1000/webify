@@ -15,7 +15,7 @@ function openContactModal( message) {
     <div class="screen">
       <div class="screen-header">
         <div class="screen-header-left">
-          <button class="screen-header-button close" id="closeButton1"></button>
+          <button data-pointer="hover" class="screen-header-button close" id="closeButton1"></button>
           <div class="screen-header-button maximize"></div>
           <div class="screen-header-button minimize"></div>
         </div>
@@ -40,22 +40,22 @@ function openContactModal( message) {
             <input type="hidden" name="access_key" value="40d910f7-a3af-41a9-a081-7323558c24e0">
 
               <div class="app-form-group">
-                <input class="app-form-control"  name="name" placeholder="NAME"  autocomplete="given-name"  required>
+                <input data-pointer="input" class="app-form-control"  name="name" placeholder="NAME"  autocomplete="given-name"  required>
               </div>
               
               <div class="app-form-group">
-                <input class="app-form-control" name="email" placeholder="EMAIL" autocomplete="email"  required>
+                <input data-pointer="input" class="app-form-control" name="email" placeholder="EMAIL" autocomplete="email"  required>
               </div>
               <div class="app-form-group">
-                <input class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
+                <input data-pointer="input"  class="app-form-control" name="number" placeholder="CONTACT NO" autocomplete="tel"  >
               </div>
 
               <div class="app-form-group message">
-                <textarea  class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
+                <textarea data-pointer="input" class="app-form-control" name="mesage" placeholder=${message}  autocomplete="off" required></textarea >
               </div>
             <div class="app-form-group buttons">
-              <button type="button" class="app-form-button" id="closeButton2">CANCEL</button>
-              <button type="submit" class="app-form-button">SEND</button>
+              <button data-pointer="hover" type="button" class="app-form-button" id="closeButton2">CANCEL</button>
+              <button data-pointer="hover" type="submit" class="app-form-button">SEND</button>
             </div>
           </form>
         </div>
