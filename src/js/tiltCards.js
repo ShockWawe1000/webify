@@ -1,4 +1,8 @@
 export function tiltCardsLogic() {
+
+  var tempElement =  document.querySelector('.card');
+if (typeof(tempElement) != 'undefined' && tempElement != null)
+  {
   let cardEls = document.getElementsByClassName("card");
   
   Array.from(cardEls).forEach(cardEl => {
@@ -8,4 +12,5 @@ export function tiltCardsLogic() {
           cardEl.style.setProperty("--y", e.clientY - y);
       });
   });
+}
 }

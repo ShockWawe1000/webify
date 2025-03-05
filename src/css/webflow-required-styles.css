@@ -1,3 +1,9 @@
+ *{
+  cursor: none;
+} 
+
+
+
 .heading-wrap {
   opacity: 0;
 }
@@ -14,7 +20,15 @@ body {
   text-decoration-thickness: from-font !important;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color:   #fcc181;
+  background:  rgba(165,76,253,1);
+}
 
+::selection {
+  color:   #fcc181;
+  background:  rgba(165,76,253,1);
+}
 
 *::-webkit-scrollbar-track
 {
@@ -223,7 +237,7 @@ a,
 .popup-modal {
   display: none;
   position: fixed;
-  z-index: 9999999999999;
+  z-index: 99999;
   left: 0;
   top: 0;
   width: 100%;
@@ -247,7 +261,7 @@ a,
   right: 0;
   padding: 0px 10px;
   font-size: 20px;
-  cursor: pointer;
+
   border: red solid;
   border-top-right-radius: 13px;
   background-color: red;
@@ -289,13 +303,13 @@ width: 50%;
 
 .introScreen{
   position: fixed;
-  z-index: 97;
+  z-index: 9999;
   top:0px;
   right: 0px;
  height: 100vh;
  width: 100vw;
 
-  
+  cursor: none;
   background-color: rgb(20, 20, 20);
   display: flex;
   justify-content: center;
@@ -304,12 +318,10 @@ width: 50%;
 }
 
 #animatedLogo{
-  width: 20%;
-  z-index: 98;
+  width: 10%;
+  z-index: 9999;
+  cursor: none;
 }
-
-
-
 
 
 #loadingSvg{
@@ -317,14 +329,87 @@ position: absolute;
 height: 100vh;
 width: 100vw;
 
-z-index: 999;
+z-index: 9999;
 object-fit: cover;
 }
 
-.transition{
-
-z-index: 99;
+.happen-image-wrap{
+height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
+
+.processImg{
+  width: 270px;
+  height: auto;
+}
+
+.impactHeader{
+margin-top:40px ;
+margin-bottom:60px ;
+}
+
+
+.ratingDetails{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.stars {
+  width: 140px;
+}
+
+#trustpilotImg{
+  width: 135px;
+}
+
+.transition{
+z-index: 9999;
+cursor: none;
+}
+
+
+
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  &__circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+
+      &--small {
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          
+      }
+
+      &--large {
+          width: 40px;
+          height: 40px;
+          border: 2px solid white;
+          
+      }
+
+  }
+
+}
+
+.cursor-hide {
+  display: none;
+}
+
 
 
 .features-card{
@@ -336,14 +421,13 @@ z-index: 99;
   transform: scale(1.2);  /* Zoom in more on smaller screens */
 }
 
+
+
 @media (max-width: 1024px) {
   #animated-svg {
     transform: scale(1.4);  /* Zoom in more on smaller screens */
 }
-#animatedLogo{
-  width: 30%;
 
-}
 }
 
 @media screen and (max-width: 991px) {

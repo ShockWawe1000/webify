@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 
-<html data-wf-page="64845ff44619a4f77cbc531a" lang="en">
+<html data-wf-page="64845ff44619a4f77cbc531a" lang="mk">
   <head>
     <meta charset="utf-8" />
-    <title>Webify - Award-Winning Websites</title>
+    <title>Webify - Најдостапни Веб-страници</title>
+
+     <!-- Change When website -->
+     <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:5500/dist/index.html"/>  <!-- Change When website -->
+     <link rel="alternate" hreflang="mk" href="http://127.0.0.1:5500/dist/mk.html"  />    <!-- Change When website -->
+      <!-- Change When website -->
+ 
+
     <meta
-      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
+      content="Webify, водечки веб-дизајнери во Македонија, ви нуди креирање на онлајн присуство за вашиот бизнис, агенција или стартап. Остајте ја замаранцијата со веб-страница на нас, и фокусирајте се потполно на вашиот бизнис."
       name="description"
     />
     <meta
-      content="Empower Your Business with Webify: Websites & Branding custom tailored to you"
+      content="Издигнете го вашиот бизнис со Webify: Веб-страници и брендирање прилагодени за вас"
       property="og:title"
     />
     <meta
-      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
+      content="Откријте го Webify, еден од водечките веб-дизајнери во Македонија, кој нуди моментален пристап до искусни креативци за вашиот бизнис, агенција или стартап. Остајте ја замаранцијата со веб-страница на нас, и фокусирајте се потполно на вашиот бизнис."
       property="og:description"
     />
     <meta
-      content="Empower Your Business with Webify: Websites & Branding custom tailored to you"
+      content="Издигнете го вашиот бизнис со Webify: Веб-страници и брендирање прилагодени за вас"
       property="twitter:title"
     />
     <meta
-      content="Discover Webify, one of the leading web designers based in Europe, offering immediate access to senior creatives for your business, agency, or start-up. Say goodbye to struggling with your online presence and get ready to open your doors to the entire world."
+      content="Откријте го Webify, еден од водечките веб-дизајнери со седиште во Европа, кој нуди моментален пристап до искусни креативци за вашиот бизнис, агенција или стартап. Остајте ја замаранцијата со веб-страница на нас, и фокусирајте се потполно на вашиот бизнис."
       property="twitter:description"
     />
     <meta property="og:type" content="website" />
@@ -34,7 +41,12 @@
     ></script>
 
  
+ 
   <script defer src="index.js"></script><link href="index.css" rel="stylesheet"></head>
+  <div class="cursor">
+    <div class="cursor__circle cursor__circle--small"></div>
+    <div class="cursor__circle cursor__circle--large"></div>
+  </div>
 
   <div id="intro" class="introScreen">
     <div id="loadingSvg"></div>
@@ -46,6 +58,7 @@
   </div>
 
   <body>
+
     <div class="page-wrapper">
       <div class="global-classes w-embed"></div>
       <div class="bg-pattern">
@@ -62,12 +75,13 @@
                   <div class="section-hero-wrap">
                     <div class="hero-left">
                       <div class="bottom-margin-28">
-                        <h1>веб-страници</h1>
+                        <h1>websites</h1>
                       </div>
                     </div>
                     <div class="hero-right">
                       <p class="para-large">
-                        Создавање веб-страници за подигање на вашиот бизнис, агенција или стартап.
+                        Creating websites to elevate your business, agency or
+                        start-up.
                       </p>
                     </div>
                   </div>
@@ -84,14 +98,14 @@
         <div class="page-padding">
           <div class="container nav-coontainer">
             <div class="nav-left">
-              <a
+              <a data-pointer="hover" 
                 href="/"
                 aria-current="page"
                 class="brand w-inline-block w--current"
               >
                 <!-- Logo -->
                 <div id="webify_logo"></div>
-              </a>
+              </a data-pointer="hover" >
             </div>
 
 
@@ -99,20 +113,20 @@
 
               <details class="dropdown">
                   <summary role="button" >
-                      <a class="button" id="languageIcon"></a>
+                      <a data-pointer="hover"  class="button" id="languageIcon"></a data-pointer="hover" >
                   </summary>
                  <ul>
-                    <li><a rel="alternate"  hreflang="en" href="index.html"> English</a></li>
-                    <li><a rel="alternate"  hreflang="mk" href="mk.html"> > Македонски</a></li>
+                    <li><a data-pointer="hover"  rel="alternate"  hreflang="en" href="index.html"> English</a data-pointer="hover" ></li>
+                    <li><a data-pointer="hover"  rel="alternate"  hreflang="mk" href="mk.html">  > Македонски</a data-pointer="hover" ></li>
                 </ul>
             </details>
 
-              <!-- <a
+              <!-- <a data-pointer="hover" 
                 target="_blank"
                 class="nav-link openContactModal hover-underline-animation left"
                 >Contact Us
-              </a> -->
-              <a href="#plans" class="cta-button w-button">Започнете</a>
+              </a data-pointer="hover" > -->
+              <a data-pointer="hover"  href="#plans" class="cta-button w-button">Get Started</a data-pointer="hover" >
             </div>
           </div>
         </div>
@@ -143,32 +157,32 @@
                   >
                     <div class="heading-wrapper-wrap">
                       <div class="heading-wrap">
-                        <h1 class="heading">Моќни </h1>
-                        <h1 class="heading">Влијателни </h1>
-                        <h1 class="heading">Огромни </h1>
+                        <h1 class="heading">Powerfull</h1>
+                        <h1 class="heading">Impactfull</h1>
+                        <h1 class="heading">Immense</h1>
                         <h1 class="heading">Supreme</h1>
-                        <h1 class="heading">Врховни </h1>
-                        <h1 class="heading">Извонредни </h1>
-                        <h1 class="heading">Бесконечни </h1>
-                        <h1 class="heading">Неограничени</h1>
+                        <h1 class="heading">Phenomenal</h1>
+                        <h1 class="heading">Remarkable</h1>
+                        <h1 class="heading">Infinite</h1>
+                        <h1 class="heading">Unlimited</h1>
                       </div>
                     </div>
 
                     <div class="margin-bottom-20">
                       <div class="h1-max">
-                        <h1 class="gradient-h1 h1-top">веб-страници</h1>
+                        <h1 class="gradient-h1 h1-top">websites</h1>
                       </div>
                     </div>
 
-                    <a
+                    <a data-pointer="hover" 
                       target="_blank"
                       class="arrow-link w-inline-block openContactModal hover-underline-animation left"
                       ><div class="arrow-link-flex">
-                        <div>Резервирајте повик</div>
+                        <div>Book a Call</div>
                         <div class="arrow-link-icon" id="buttonNext1">
 
                         </div></div
-                    ></a>
+                    ></a data-pointer="hover" >
                   </div>
                   <div
                     style="
@@ -186,7 +200,8 @@
                     class="hero-right"
                   >
                     <p class="para-large">
-                      Производство на совршено онлајн присуство за вашиот бизнис, агенција, стартап.
+                      Manufacturing the perfect online presence for your
+                      business, agency, startup.
                     </p>
                   </div>
                 </div>
@@ -203,16 +218,16 @@
               <div class="sticky-nav-flex">
                 <div class="sticky-nav">
                   <div class="sticky-nav-menu">
-                    <a href="#services" class="sticky-nav-link">Услуги</a
-                    ><a href="#process" class="sticky-nav-link mobo-hid"
-                      >Процес</a
-                    ><a href="#work" class="sticky-nav-link mobo-hid">Работа</a
-                    ><a href="#about" class="sticky-nav-link mobo-hid">За нас</a
-                    ><a href="#plans" class="sticky-nav-link">Планови</a
-                    ><a href="#faqs" class="sticky-nav-link mobo-hid">FAQs</a>
+                    <a data-pointer="hover"  href="#services" class="sticky-nav-link">Services</a data-pointer="hover" 
+                    ><a data-pointer="hover"  href="#process" class="sticky-nav-link mobo-hid"
+                      >Process</a data-pointer="hover" 
+                    ><a data-pointer="hover"  href="#work" class="sticky-nav-link mobo-hid">Work</a data-pointer="hover" 
+                    ><a data-pointer="hover"  href="#about" class="sticky-nav-link mobo-hid">About</a data-pointer="hover" 
+                    ><a data-pointer="hover"  href="#plans" class="sticky-nav-link">Plans</a data-pointer="hover" 
+                    ><a data-pointer="hover"  href="#faqs" class="sticky-nav-link mobo-hid">FAQs</a data-pointer="hover" >
                   </div>
-                  <a href="#plans" class="cta-button nav w-button"
-                    >Започнете</a
+                  <a data-pointer="hover"  href="#plans" class="cta-button nav w-button"
+                    >Get Started</a data-pointer="hover" 
                   >
                 </div>
               </div>
@@ -229,8 +244,9 @@
                     <div id="atWebifyTextContainer">
                       <div id="atWebifyTextContainerLeft">
                         <h2 class="features-h2">
-                          Во <span class="bold-span"> Webify</span>,ние не создаваме само веб-страници, туку го градиме
-                          <span class="bold-span">вашето онлајн присуство.</span>
+                          At <span class="bold-span"> Webify</span>, we don't
+                          just build websites - we build
+                          <span class="bold-span"> your online presence. </span>
                         </h2>
                       </div>
 
@@ -252,9 +268,11 @@
                           "
                           class="features-h2"
                         >
-                          Отфрлете ја главоболката од справувањето со вашето онлајн присуство и фокусирајте се на вашиот бизнис. Нашата главна цел е да изградиме доверба со тоа што ви даваме
+                          Drop the headache of dealing with your online
+                          presence, and focus on your business. Our main goal is
+                          to build trust by giving you
                           <span class="bold-span">
-                            резултати со кои ќе се гордеете да ги покажете.
+                            results you will be proud to show off.
                           </span>
                         </h2>
                       </div>
@@ -293,14 +311,15 @@
                               <div class="">
                                 <div>
                                   <h3>
-                                    Вашиот личен тим
+                                    Your Personal Team
                                     <ng-template #name></ng-template>
                                   </h3>
                                 </div>
                               </div>
                             </div>
                             <p>
-                              Дизајнерите, програмерите и маркетинг стратезите работат на тоа да ја доведете вашата визија во реалност
+                              Designers, Developers and Marketing strategists
+                              working on your bringing your vision to reality
                             </p>
                             <div class="glow orange"></div>
                           </div>
@@ -320,11 +339,11 @@
                             </div>
                             <div class="bottom-margin-4">
                               <div class="">
-                                <h3>Екстремна сопственост</h3>
+                                <h3>Extreme Ownership</h3>
                               </div>
                             </div>
                             <p>
-                              Се гордееме со преземањето екстремна сопственост на нашите проекти, секогаш осигурувајќи се дека испорачуваме надвор од очекуваното.
+                              We pride ourselves by taking extreme ownership of our projects, alwasy making sure we're delivering beyound the expected.
                             </p>
                             <div class="glow"></div>
                           </div>
@@ -336,11 +355,12 @@
                               </div>
   
                               <div class="" style="margin-bottom: 4px;">
-                                <h3>Многу брз пресврт</h3>
+                                <h3>Hyperfast Turnaround</h3>
                               </div>
                          
                             <p>
-Добијте дизајни во рок од неколку дена, веб-продавници во рок од една недела. Никогаш нема да треба да чекате да започнете повторно!                            </p>
+                              Receive designs within days, web shops within a week. You'll never have to wait to get started again!
+                            </p>
                             <div class="glow"></div>
                           </div>
                         
@@ -351,11 +371,12 @@
                             </div>
                             <div class="bottom-margin-4">
                               <div class="">
-                                <h3>Гаранција за враќање на парите</h3>
+                                <h3>Money Back Guarantee</h3>
                               </div>
                             </div>
                             <p>
-Ако не ви се допаѓаат дизајните пред да започне развојот, ќе ви се вратат парите, без прашања.                            </p>
+                              If you dont like the designs before development starts, you get your money back, no questions asked.
+                            </p>
                            <div class="glow"></div>
                           </div>
                       
@@ -401,7 +422,7 @@
                             opacity: 0;
                           "
                         >
-                          Со што можеме да ви помогнеме
+                          What we can help you with
                         </h2>
                       </div>
                     </div>
@@ -411,14 +432,14 @@
                       <div class="box">
                         <span></span>
                         <div class="contentServices">
-                          <h2>Статични веб-страници</h2>
-                          <div class="popular-tag ">Специјална понуда</div>
+                          <h2>Static Websites</h2>
+                          <div class="popular-tag ">Special Offer</div>
                           <p class="list">
-                            Портфолио на брендови<br />
-                            Целни страници<br />
-                           Уметничка галерија<br />
-                            Блог/Содржина<br />
-                            Филијалата на страницата<br />
+                            Brand Portfolio<br />
+                            Landing Pages<br />
+                            Art Gallery<br />
+                            Blog/Content<br />
+                            Affiliate Site<br />
 
                       </p>
                       
@@ -430,7 +451,7 @@
                       <div class="box">
                         <span></span>
                         <div class="contentServices">
-                          <h2>Продавници за е-трговија</h2>
+                          <h2>ECommerce Shops</h2>
                           <p class="list">
                             Shopify<br />
                             WooCommerce<br />
@@ -447,12 +468,12 @@
                       <div class="box">
                         <span></span>
                         <div class="contentServices">
-                          <h2>Веб  <br />Апликација</h2>
+                          <h2>Web  <br />Apps</h2>
                           <p class="list">
-                           Управување со односи со клиенти (CRM)<br />
-                            Сметководство<br />
-                            Фактурирање<br />
-                            Инвентар<br /> 
+                            Customer Rel Management (CRM)<br />
+                            Accounting<br />
+                            Invoicing<br />
+                            Inventory<br /> 
   
                           </p>
                         </div>
@@ -464,7 +485,7 @@
                         <span></span>
                         <div class="contentServices">
                           <div class="popular-tag " style="background-color: rgb(164, 96, 233);">New</div>
-                          <h2>Крипто плаќања</h2>
+                          <h2>Crypto Payments</h2>
                           MoonPay<br />
                           NOWPayments<br />
                           BitPay<br />
@@ -491,12 +512,12 @@
                         <div class="box">
                           <span></span>
                           <div class="contentServices">
-                            <h2 >Брендирање <br> &amp; Маркетинг</h2>
+                            <h2 >Branding <br> &amp; Marketing</h2>
                             <p class="list">
-                             Лого и брендирање <br />
-                              Маркетинг план<br />
-                              Создавање содржина<br />
-                              Кампањи за е-пошта<br />
+                              Logo & Branding <br />
+                              Marketing Plan<br />
+                              Content Creation<br />
+                              Email Campaigns<br />
                             </p>
                           </div>
                         </div>
@@ -553,7 +574,7 @@
                               opacity: 0;
                             "
                           >
-                            Остварување 
+                            Making it happen
                           </h2>
                         </div>
                       </div>
@@ -584,22 +605,19 @@
                             </div>
                           </div>
                           <div class="margin-bottom-8">
-                            <h3>Дизајн фаза</h3>
+                            <h3>Design Stage</h3>
                           </div>
                           <div>
                             <p class="hppn-para">
-                             Ние го подготвуваме дизајнот во деновите по потпишувањето на договорот. Откако ќе постигнеме нацрт од кој сте задоволни, продолжуваме на...
+                              We draft up the design in the days following the
+                              agreement signing. Once we reach a draft that
+                              youre happy with we move on to...
                             </p>
                           </div>
                         </div>
                         <div class="happen-card-bottom">
-                          <div class="happen-image-wrap">
-                            <img
-                              src="https://cdn.prod.website-files.com/64845ff44619a4f77cbc530c/64d0e1c397fd0d1f1e50c2fa_hppn%203.svg"
-                              loading="lazy"
-                              alt=""
-                              class="image-100 responsiveHide"
-                            />
+                          <div class="happen-image-wrap responsiveHide"  id="designImg">
+               
                           </div>
                         </div>
                       </div>
@@ -628,22 +646,19 @@
                             </div>
                           </div>
                           <div class="margin-bottom-8">
-                            <h3>Фаза на развој</h3>
+                            <h3>Development Stage</h3>
                           </div>
                           <div>
                             <p class="hppn-para">
-                             Едноставна и ефективна комуникација преку нашиот CRM за да провериме каде сме во моментот со вашата веб-страница.
+                              Simple and effective communication through our CRM
+                              to check where we are currently with your website.
+                              After some blood and sweat we...
                             </p>
                           </div>
                         </div>
                         <div class="happen-card-bottom">
-                          <div class="happen-image-wrap">
-                            <img
-                              src="https://cdn.prod.website-files.com/64845ff44619a4f77cbc530c/64d0e1c33f452fef669edceb_hppn%202.svg"
-                              loading="lazy"
-                              alt=""
-                              class="image-100 responsiveHide"
-                            />
+                          <div class="happen-image-wrap responsiveHide"  id="developImg">
+             
                           </div>
                         </div>
                       </div>
@@ -672,22 +687,19 @@
                             </div>
                           </div>
                           <div class="margin-bottom-8">
-                            <h3>Распоредување 🚀</h3>
+                            <h3>Deployment 🚀</h3>
                           </div>
                           <div>
                             <p class="hppn-para is-3">
-                              Веб-страницата оди во живо и официјално имате лице на интернет. Честитки, од тука па натаму ја одржуваме страницата и се грижиме да работи беспрекорно
+                              Website goes live and you officially have a face
+                              on the net. Congratulations, from here on we
+                              maintain the site and make sure its smooth sailing
                             </p>
                           </div>
                         </div>
                         <div class="happen-card-bottom">
-                          <div class="happen-image-wrap">
-                            <img
-                              src="https://cdn.prod.website-files.com/64845ff44619a4f77cbc530c/64d0e1c370f8426f462a3f8f_hppn%201.svg"
-                              loading="lazy"
-                              alt=""
-                              class="image-100 responsiveHide"
-                            />
+                          <div class="happen-image-wrap responsiveHide" id="launchImg">
+                      
                           </div>
                         </div>
                       </div>
@@ -712,7 +724,7 @@
           >
             <div class="page-padding relative-top">
               <div class="vertical-spacing">
-                <div class="container">
+                <div class="container ">
                   <div class="work-section-wrap">
                     <div
                       style="
@@ -734,18 +746,18 @@
                         class="right-align"
                       >
                         <div class="text-ra">
-                          <div class="max-320"><h2>Вкусен дегустатор</h2></div>
+                          <div class="max-320"><h2>A delicious taster</h2></div>
                         </div>
                       </div>
                       <div class="right-align">
-                        <a
+                        <a data-pointer="hover" 
                           href="https://www.linkedin.com/company/webifymk"
                           target="_blank"
                           class="arrow-link-flex w-inline-block hover-underline-animation left"
-                          ><div>Погледнете ја неодамнешната работа</div>
+                          ><div>View recent work</div>
                           <div class="arrow-link-icon" id="linkedinIcon">
                             </div
-                        ></a>
+                        ></a data-pointer="hover" >
                       </div>
                     </div>
                     <div
@@ -819,116 +831,55 @@
             data-w-id="aed21fab-c6a3-10d1-dab1-4166e69e8d2c"
             class="section_esd"
           >
-            <div class="page-padding">
-              <div class="vertical-spacing">
-                <div class="container">
-                  <div class="esd-section-wrap">
-                    <div class="esd-flex">
-                      <div
-                        id="w-node-_1a625f67-a5eb-25ad-246b-4ea91476f722-7cbc531a"
-                        class="esd-content-wrap"
+           
+          <div class="container">
+            <div class="imapctContainer">
+
+
+              <div class="esd-section-wrap">
+                <div class="esd-flex">
+                  <div
+                    id="w-node-_1a625f67-a5eb-25ad-246b-4ea91476f722-7cbc531a"
+                    class="esd-content-wrap"
+                  >
+                    <div class="esd-h2-wrap">
+                      <h2
+                        data-w-id="07fe068f-89c7-c304-7f77-49a681f44b5d"
+                        style="
+                          -webkit-transform: translate3d(0, 50px, 0)
+                            scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                            rotateZ(0) skew(0, 0);
+                          -moz-transform: translate3d(0, 50px, 0)
+                            scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                            rotateZ(0) skew(0, 0);
+                          -ms-transform: translate3d(0, 50px, 0)
+                            scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                            rotateZ(0) skew(0, 0);
+                          transform: translate3d(0, 50px, 0)
+                            scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                            rotateZ(0) skew(0, 0);
+                          opacity: 0;
+                        "
                       >
-                        <div class="esd-h2-wrap">
-                          <h2
-                            data-w-id="07fe068f-89c7-c304-7f77-49a681f44b5d"
-                            style="
-                              -webkit-transform: translate3d(0, 50px, 0)
-                                scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                rotateZ(0) skew(0, 0);
-                              -moz-transform: translate3d(0, 50px, 0)
-                                scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                rotateZ(0) skew(0, 0);
-                              -ms-transform: translate3d(0, 50px, 0)
-                                scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                rotateZ(0) skew(0, 0);
-                              transform: translate3d(0, 50px, 0)
-                                scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                rotateZ(0) skew(0, 0);
-                              opacity: 0;
-                            "
-                          >
-                           Сениор дизајнери
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="esd-flex">
-                      <div
-                        id="w-node-_3477060b-4f72-7eb9-4628-be226f577bb6-7cbc531a"
-                        class="esd-content-wrap"
-                      >
-                        <div
-                          style="
-                            opacity: 0;
-                            -webkit-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            -moz-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            -ms-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            transform: translate3d(0, 50px, 0) scale3d(1, 1, 1)
-                              rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                          "
-                          class="esd-card"
-                        >
-                          <div class="margin-bottom-16">
-                            <div class="esd-title">
-                              <h1 class="gradient-h1">30+</h1>
-                            </div>
-                          </div>
-                          <div class="margin-bottom-20">
-                            <h3>Комбинирани години во индустријата</h3>
-                          </div>
-                          <p>
-                        Дизајн обезбеден од сениорите со око за детали и нивните прсти на пулсот. Ви даваме свежи дизајни кога е потребно.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        id="w-node-d236b96b-40aa-feab-bed0-9fafe0194239-7cbc531a"
-                        class="esd-content-wrap"
-                      >
-                        <div
-                          style="
-                            opacity: 0;
-                            -webkit-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            -moz-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            -ms-transform: translate3d(0, 50px, 0)
-                              scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                              skew(0, 0);
-                            transform: translate3d(0, 50px, 0) scale3d(1, 1, 1)
-                              rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                          "
-                          class="esd-card"
-                        >
-                          <div class="margin-bottom-16">
-                            <div class="esd-title">
-                              <h1 class="gradient-h1">60%</h1>
-                            </div>
-                          </div>
-                          <div class="margin-bottom-20">
-                            <h3>Месечни заштеди на трошоците</h3>
-                          </div>
-                          <p>
-                            Ангажирањето на вработен со полно работно време или хонорарец може да биде скапо, со Webify го добивате нашиот тим за фиксна цена.
-                          </p>
-                        </div>
-                      </div>
+                      The Impact We Leave
+                      </h2>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="ab-bg esd" id="bg_line7">
+          
 
-            </div>
+                <div class="containerCarousel">
+                  <figure class="icon-cards mt-3">
+                    <div class="icon-cards__content">
+                      <div class="icon-cards__item d-flex align-items-center justify-content-center" id="card-1">  </div>
+                      <div class="icon-cards__item d-flex align-items-center justify-content-center" id="card-2">  </div>
+                      <div class="icon-cards__item d-flex align-items-center justify-content-center" id="card-3">  </div>
+                    </div>
+                  </figure>
+                  
+                </div>
+              </div>
+             </div>
           </section>
           <section
             id="plans"
@@ -957,7 +908,7 @@
                           opacity: 0;
                         "
                       >
-                        Планови за секој буџет
+                        Plans for every budget
                       </h2>
                     </div>
                     <div
@@ -981,39 +932,39 @@
                       >
                         <div class="pc-top">
                           <div class="margin-bottom-8">
-                            <h3 class="pc-title">Еднократна исплата</h3>
+                            <h3 class="pc-title">LUMP SUM</h3>
                           </div>
-                          <P>Платете за дизајнот на веб-страницата одеднаш, а потоа само плаќајте хостинг месечно.</P>
+                          <P>Pay for the design of the website at once, then just pay hosting monthly.</P>
                           <ul class="featureList">
-                            <li>Дизајн и развој</li>
-                            <li>Хостинг од 1500 денари / месец</li>
-                            <li>Надомест од 6000 денари по страница по 5 страници</li>
-                            <li>+3000 денари/месечно Неограничени уредувања</li>
-                            <li>+ 15000 денари за да додадете блог</li>
-                            <li class="disabled">24/7 поддршка</li>
-                            <li class="disabled">Доживотни ажурирања</li>
+                            <li>Design And Development</li>
+                            <li>$25/mo Hosting</li>
+                            <li>$100 fee Per Page after 5</li>
+                            <li>+$50/mo Unlimited Edits </li>
+                            <li>+$250 To Add A Blog</li>
+                            <li class="disabled">24/7 Support</li>
+                            <li class="disabled">Lifetime Updates</li>
                         </ul>
 
                         </div>
                         <div class="pc-bottom">
                           <div class="bottom-2">
-                            <h3 class="pc-title">€400 <span style="font-size: 20px; ;">+1500/месец Хостинг </span></h3>
+                            <h3 class="pc-title">€400 <span style="font-size: 20px; ;">+$25/mo Hosting </span></h3>
                           </div>
                           <div class="bottom-margin-28">
                             <div class="price-disclaimer">
-                             Паузирајте или откажете во секое време
+                              Pause or cancel anytime
                             </div>
                           </div>
                           <div class="price-cta-wrap  openContactModal ">
-                            <a
+                            <a data-pointer="hover" 
                              
                               target="_blank"
                               class="cta-button w-button"
-                              >Започнете</a
+                              >Get Started</a data-pointer="hover" 
                             >
                           </div>
                         </div>
-                        <div class="popular-tag is-purple">2x БАРАЊАТА</div>
+                        <div class="popular-tag is-purple">2x THE REQUESTS</div>
                       </div>
 
 
@@ -1026,39 +977,39 @@
                       >
                         <div class="pc-top">
                           <div class="margin-bottom-8">
-                            <h3 class="pc-title">МЕСЕЧЕН</h3>
+                            <h3 class="pc-title">MONTHLY</h3>
                           </div>
-                          <P>Никогаш повеќе не грижете се дека вашата веб-страница ќе ви донесе клиенти!</P>
+                          <P>Never worry about your website bringing you customers ever again!</P>
                           <ul class="featureList">
-                             <li>Дизајн и развој</li>
-                            <li>Хостинг од 1500 денари / месец</li>
-                            <li>Надомест од 6000 денари по страница по 5 страници</li>
-                            <li>+3000 денари/месечно Неограничени уредувања</li>
-                            <li>+ 15000 денари за да додадете блог</li>
-                            <li>24/7 поддршка</li>
-                            <li >Доживотни ажурирања</li>
+                            <li>Design And Development</li>
+                            <li>Includes Hosting</li>
+                            <li>$100 Fee Per Page After 5</li>
+                            <li>+$250 To Add A Backlog</li>
+                            <li>Unlimited Edits</li>
+                            <li>24/7 Support</li>
+                            <li>Lifetime Updates</li>
                         </ul>
                         </div>
                         <div class="pc-bottom">
                           <div class="bottom-2">
                           
-                            <h3 class="pc-title">€125<span style="font-size: 20px; ;">/ месец  </span></h3>
+                            <h3 class="pc-title">€125<span style="font-size: 20px; ;">/ monthly  </span></h3>
                           </div>
                           <div class="bottom-margin-28">
                             <div class="price-disclaimer">
-                             Паузирајте или откажете во секое време
+                              Pause or cancel anytime
                             </div>
                           </div>
                           <div class="price-cta-wrap  openContactModal ">
-                            <a
+                            <a data-pointer="hover" 
                               
                               target="_blank"
                               class="cta-button green w-button"
-                              >Започнете</a
+                              >Get Started</a data-pointer="hover" 
                             >
                           </div>
                         </div>
-                        <div class="popular-tag">Најпопуларнo</div>
+                        <div class="popular-tag">Most popular</div>
                       </div>
 
 
@@ -1074,34 +1025,34 @@
                       >
                         <div class="pc-top">
                           <div class="margin-bottom-8">
-                            <h3 class="pc-title">Е-ТРГОВИЈА</h3>
+                            <h3 class="pc-title">ECOMMERCE</h3>
                           </div>
-                          <P>Добијте продавница од светска класа за вашиот бренд. Подигнете го вашиот бренд денес.</P>
+                          <P>Get a data-pointer="hover"  world class shop for your brand. Elevate your brand today.</P>
                           <ul class="featureList">
-                            <li>Прилагодена продавница за Shopify</li>
-                            <li>Конфигурирајте ги сите и сите апликации</li>
-                            <li>Интегрирана испорака</li>
-                            <li>Преглед на упатството за Shopify</li>
-                            <li>Целосно може да се уредува во Shopify CMS</li>
-                            <li class="disabled">+3000 денари/месечно Неограничени уредувања</li>
-                            <li class="disabled">24/7 поддршка</li>
+                            <li>Custom Shopify Store</li>
+                            <li>Configure Any And All Apps</li>
+                            <li>Integrated Shipping</li>
+                            <li>Shopify Tutorial Walkthrough</li>
+                            <li>Fully Editable In Shopify CMS</li>
+                            <li class="disabled">+$50/mo Unlimited Edits</li>
+                            <li class="disabled">24/7 Support</li>
                         </ul>
                         </div>
                         <div class="pc-bottom">
                           <div class="bottom-2">
-                            <h3 class="pc-title">€4k<span style="font-size: 20px; ;"> Почнувајќи  </span></h3>
+                            <h3 class="pc-title">€4k<span style="font-size: 20px; ;"> Starting  </span></h3>
                           </div>
                           <div class="bottom-margin-28">
                             <div class="price-disclaimer">
-                              Прилагоден проект - Прилагодени цени
+                              Custom Project - Custom Pricing
                             </div>
                           </div>
                           <div class="price-cta-wrap  openContactModal ">
-                            <a
+                            <a data-pointer="hover" 
                        
                               target="_blank"
                               class="cta-button w-button"
-                              >Започнете</a
+                              >Get Started</a data-pointer="hover" 
                             >
                           </div>
                         </div>
@@ -1111,23 +1062,24 @@
                         class="price-sub-card"
                       >
                         <div class="margin-bottom-8">
-                          <h3 class="pc-title">Разговарајте</h3>
+                          <h3 class="pc-title">Talk it through</h3>
                         </div>
                         <div class="margin-bottom-8">
                           <div class="margin-bottom-16">
                             <p class="price-para">
-                              Треба да разговарате на вашата прекрасна нова веб-страница? Слободно контактирајте не!
+                              Need to talk on your awesome new website?
+                              Feel free to reach out!
                             </p>
                           </div>
                         </div>
-                        <a
+                        <a data-pointer="hover" 
                           target="_blank"
                           class="arrow-link w-inline-block openContactModal hover-underline-animation left"
                           ><div class="arrow-link-flex">
-                            <div>Резервирајте повик</div>
+                            <div>Book a Call</div>
                             <div class="arrow-link-icon" id="buttonNext2">
                             </div></div
-                        ></a>
+                        ></a data-pointer="hover" >
                       </div>
                       <div
                         id="w-node-a7b7589f-53ec-8318-348b-910725158df6-7cbc531a"
@@ -1145,7 +1097,7 @@
                           </div>
                           <div class="popular-tag">Free</div>
                         </div>
-                        <a
+                        <a data-pointer="hover" 
                        
                           target="_blank"
                           class="arrow-link w-inline-block openContactModal hover-underline-animation left"
@@ -1155,33 +1107,34 @@
                             <div class="arrow-link-icon" id="buttonNext3">
                           
                             </div></div
-                        ></a>
+                        ></a data-pointer="hover" >
                       </div>
                       <div
                         id="w-node-_321e2471-8040-1c74-bf33-f381e4ba20fe-7cbc531a"
                         class="price-sub-card"
                       >
                         <div class="margin-bottom-8">
-                          <h3 class="pc-title">Упатете го клиентот</h3>
+                          <h3 class="pc-title">Refer a client</h3>
                         </div>
                         <div class="margin-bottom-8">
                           <div class="margin-bottom-16">
                             <p class="price-para">
-                             Намалете ги вашите плаќања до 15% месечно со упатување на нас.
+                              Reduce your payments up to 15% monthly by
+                              reffering us.
                             </p>
                           </div>
                         </div>
-                        <a
+                        <a data-pointer="hover" 
                        
                           target="_blank"
                           class="arrow-link w-inline-block  openContactModal  hover-underline-animation left"
                           data-message="Refer"
                           ><div class="arrow-link-flex">
-                            <div>Приклучи се сега</div>
+                            <div>Join now</div>
                             <div class="arrow-link-icon" id="buttonNext4">
                          
                             </div></div
-                        ></a>
+                        ></a data-pointer="hover" >
                       </div>
                     </div>
                   </div>
@@ -1199,21 +1152,26 @@
                     class="testimonial-section-wrap"
                   >
                     <div class="margin-bottom-40">
-                      <div class="bold-text">Доверливи на 25+ компании</div>
+                      <div class="bold-text">Trusted by 25+ companies</div>
                     </div>
                     <div class="bottom-margin-28">
                       <p class="testimonial-para">
-                        Ако барате брилијантен тим, момците во Webify треба да бидат вашата прва станица. Работев со Ед и тимот на Webify на неколку проекти низ неколку сектори и секогаш бев импресиониран од конечните резултати. Веб-страниците на Webify се привлечни, многу полирани и многу ефикасни.
+                        If you’re looking for a brilliant team, the guys at
+                        Webify should be your first stop. I’ve worked with Ed
+                        and the team at Webify on several projects across
+                        several sectors and have always been impressed with the
+                        final results. Webify's websites are eye-catching,
+                        highly polished and very effective.
                       </p>
                     </div>
-                    <div class="margin-bottom-32">
-                      <div class="stars" id="rating5">
 
-                        <div id="trustpilotImg"></div>
-                      </div>
+                    <div class="ratingDetails">
+                      <div>Nebojsha Antic / Elena Luka</div>
+                      <div class="stars" id="rating5"> </div>
+                      <div id="trustpilotImg"></div> 
                     </div>
 
-                    <div>Nebojsha Antic / Elena Luka</div>
+                  
                   </div>
                 </div>
               </div>
@@ -1268,7 +1226,7 @@
                       <div class="faq-right">
                         <div
                           data-w-id="7b448ad7-816e-c7be-c343-2b8e08c8d84c"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1305,20 +1263,20 @@
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
                                 Good question, with Webify you’re not just
-                                hiring a designer you’re hiring senior
+                                hiring a data-pointer="hover"  designer you’re hiring senior
                                 full-stack design specialists with over 30 years
-                                combined experience. A full-stack designer has a
+                                combined experience. A full-stack designer has a data-pointer="hover" 
                                 multi-disciplinary skill set combining strategy,
                                 user experience, visual design, project
                                 management and development. 
                               </p>
                               <p class="faq-answer">
-                                This gives us a unique edge over other designers
+                                This gives us a data-pointer="hover"  unique edge over other designers
                                 to see the project through from inception to
-                                execution. Hiring a full-stack designer can also
-                                cost a pretty penny with salaries well over
+                                execution. Hiring a data-pointer="hover"  full-stack designer can also
+                                cost a data-pointer="hover"  pretty penny with salaries well over
                                 £70k+ in the UK, with also the average
-                                freelancer charging over £400 per day makes us a
+                                freelancer charging over £400 per day makes us a data-pointer="hover" 
                                 steal at roughly £150/d.
                               </p>
                               <p class="faq-answer">
@@ -1333,7 +1291,7 @@
                         </div>
                         <div
                           data-w-id="1f5c98bd-bbc3-f8e4-1abd-ae2052b5377f"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1378,7 +1336,7 @@
                         </div>
                         <div
                           data-w-id="5178cab9-2e05-54e9-f10a-280474c5888c"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1414,18 +1372,18 @@
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
                                 The team behind Hyperflow are business owners
-                                and senior designers with a wealth of knowledge,
+                                and senior designers with a data-pointer="hover"  wealth of knowledge,
                                 skill and experience.
                               </p>
                               <p class="faq-answer">
-                                Rob &amp; Ben co-founded Hyperflow to provide a
+                                Rob &amp; Ben co-founded Hyperflow to provide a data-pointer="hover" 
                                 subscription based design model to those that
                                 need on tap creative output.
                               </p>
                               <p class="faq-answer">
                                 Rob’s been working in digital design for over
                                 20+ years delivering tailor made experiences for
-                                a wide range of clients, capturing a wealth of
+                                a data-pointer="hover"  wide range of clients, capturing a data-pointer="hover"  wealth of
                                 industry experience, insights and creative
                                 problem solving. Helping to elevate businesses,
                                 their teams and delighting users.<br />
@@ -1455,7 +1413,7 @@
                       <div class="faq-right">
                         <div
                           data-w-id="8d5bc963-992f-e712-654f-aadd2e301897"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1501,7 +1459,7 @@
                                 the idea across quickly.
                               </p>
                               <p class="faq-answer">
-                                Once within Trello you can add a variety of
+                                Once within Trello you can add a data-pointer="hover"  variety of
                                 different links, attachments or videos to help
                                 provide more context or feedback. 
                               </p>
@@ -1510,7 +1468,7 @@
                         </div>
                         <div
                           data-w-id="8d5bc963-992f-e712-654f-aadd2e3018a3"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1550,8 +1508,8 @@
                                 task and approval process.<br />Larger projects
                                 are typically broken down into sub cards, please
                                 see our
-                                <a href="#web-app-process" class="white"
-                                  >website app process</a
+                                <a data-pointer="hover"  href="#web-app-process" class="white"
+                                  >website app process</a data-pointer="hover" 
                                 >.
                               </p>
                             </div>
@@ -1559,7 +1517,7 @@
                         </div>
                         <div
                           data-w-id="8d5bc963-992f-e712-654f-aadd2e3018af"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1594,15 +1552,15 @@
                           >
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
-                                <strong>current task</strong> column.Create a
+                                <strong>current task</strong> column.Create a data-pointer="hover" 
                                 new card within Trello, add your brief, project
                                 needs and any brand assets then once ready place
                                 it in the
                               </p>
                               <p class="faq-answer">
                                 Please remember we can only focus on 1 current
-                                task at a time and aim to turn this around
-                                within a 3 day window.
+                                task at a data-pointer="hover"  time and aim to turn this around
+                                within a data-pointer="hover"  3 day window.
                               </p>
                             </div>
                           </div>
@@ -1628,7 +1586,7 @@
                       <div class="faq-right">
                         <div
                           data-w-id="19558a48-851a-f653-2c6a-745668a5cd2d"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1682,7 +1640,7 @@
                         </div>
                         <div
                           data-w-id="19558a48-851a-f653-2c6a-745668a5cd39"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1726,7 +1684,7 @@
                         </div>
                         <div
                           data-w-id="19558a48-851a-f653-2c6a-745668a5cd45"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1762,7 +1720,7 @@
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
                                 You can manage your design subscription through
-                                the member area, you’ll find a Trello card named
+                                the member area, you’ll find a data-pointer="hover"  Trello card named
                                 Subscription with the link and status.
                               </p>
                             </div>
@@ -1789,7 +1747,7 @@
                       <div class="faq-right">
                         <div
                           data-w-id="f46f279e-ecd4-efde-3cd9-dba755cce284"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1825,7 +1783,7 @@
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
                                 With our design subscription service you can
-                                have a single active request but unlimited tasks
+                                have a data-pointer="hover"  single active request but unlimited tasks
                                 that need doing. <br />
                               </p>
                               <p class="faq-answer">
@@ -1837,11 +1795,11 @@
                         </div>
                         <div
                           data-w-id="f46f279e-ecd4-efde-3cd9-dba755cce290"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
-                              What if I only have a single task request?
+                              What if I only have a data-pointer="hover"  single task request?
                             </div>
                             <div class="faq-icon-wrap">
                               <div class="plus-dash"></div>
@@ -1881,7 +1839,7 @@
                         </div>
                         <div
                           data-w-id="f46f279e-ecd4-efde-3cd9-dba755cce29c"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -1920,8 +1878,8 @@
                                 task until you are happy. 
                               </p>
                               <p class="faq-answer">
-                                We do follow a process that helps us nail your
-                                vision with greater success by using a workshop
+                                We do follow a data-pointer="hover"  process that helps us nail your
+                                vision with greater success by using a data-pointer="hover"  workshop
                                 to uncover the core needs, users and pages.<br />
                               </p>
                               <p class="faq-answer">
@@ -1934,7 +1892,7 @@
                         </div>
                         <div
                           data-w-id="c9eb5c55-37f9-a411-4d10-05d180d53435"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div id="web-app-process" class="faq-question">
@@ -1969,13 +1927,13 @@
                           >
                             <div class="faq-answer-cover">
                               <p class="faq-answer">
-                                We kick off with a UX workshop, we offer 4 of
-                                these a month within the subscription plan.
+                                We kick off with a data-pointer="hover"  UX workshop, we offer 4 of
+                                these a data-pointer="hover"  month within the subscription plan.
                               </p>
                               <p class="faq-answer">
                                 Within the UX Workshop we uncover the business
                                 goals, vision, user needs and mapping, draft
-                                sitemap and site structure providing a project
+                                sitemap and site structure providing a data-pointer="hover"  project
                                 roadmap to action.
                               </p>
                               <p class="faq-answer">
@@ -1987,7 +1945,7 @@
                               </p>
                               <p class="faq-answer">
                                 We’ll work through all these tasks until you
-                                have a full set and ready for development
+                                have a data-pointer="hover"  full set and ready for development
                                 handover.<br />Workshop &gt; IA &gt; Wireframe
                                 &gt; Design &gt; Handover
                               </p>
@@ -1996,7 +1954,7 @@
                         </div>
                         <div
                           data-w-id="8820deb6-6d4d-21b8-0636-d413dae2c970"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -2053,7 +2011,7 @@
                         </div>
                         <div
                           data-w-id="89f32b1f-d9c6-6082-505c-89292f95f809"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -2095,7 +2053,7 @@
                               </p>
                               <p class="faq-answer">
                                 Typically for smaller tasks these are done much
-                                quicker and we’ll update task cards on a daily
+                                quicker and we’ll update task cards on a data-pointer="hover"  daily
                                 basis where possible.
                               </p>
                             </div>
@@ -2122,7 +2080,7 @@
                       <div class="faq-right">
                         <div
                           data-w-id="c3d8f590-e31d-011f-0366-d0b9843a9295"
-                          class="faq"
+                          class="faq" data-pointer="hover" 
                         >
                           <div class="faq-question-wrap">
                             <div class="faq-question">
@@ -2199,7 +2157,7 @@
                         <div class="faq-right">
                           <div
                             data-w-id="44252177-6ddd-8d25-142a-b22ffa8b0837"
-                            class="faq"
+                            class="faq" data-pointer="hover" 
                           >
                             <div class="faq-question-wrap">
                               <div class="faq-question">
@@ -2236,12 +2194,12 @@
                               <div class="faq-answer-cover">
                                 <p class="faq-answer">
                                   That’s awesome, we’re always looking for
-                                  talent. Please send us an email with a bit
+                                  talent. Please send us an email with a data-pointer="hover"  bit
                                   about yourself, portfolio and why us at
-                                  <a
+                                  <a data-pointer="hover" 
                                     href="mailto:webify.macedonia@gmail.com?subject=Webify%20Talent"
                                     class="white"
-                                    >webify.macedonia@gmail.com</a
+                                    >webify.macedonia@gmail.com</a data-pointer="hover" 
                                   >.
                                 </p>
                               </div>
@@ -2251,14 +2209,14 @@
                       </div>
                     </div>
                     <div class="ar-flex">
-                      <a
+                      <a data-pointer="hover" 
                         target="_blank"
                         class="arrow-link-flex white no-underline w-inline-block openContactModal openContactModal hover-underline-animation left"
                         data-message="Ask"
-                        ><div>Прашајте нè што било</div>
+                        ><div>Ask Us Anything</div>
                         <div class="arrow-link-icon" id="buttonNext5">
                         </div
-                      ></a>
+                      ></a data-pointer="hover" >
                     </div>
                   </div>
                 </div>
@@ -2274,16 +2232,16 @@
             >
               <div class="contactLeft">
                 <h2 class="heading-2">
-                  <span class="underline-span white">Бесконечен</span>
-                  дизајн направен COOL
+                  <span class="underline-span white">Endless</span>
+                  design made COOL
                 </h2>
 
                 <div class="cta-button-wrap desk">
-                  <a
+                  <a data-pointer="hover" 
                     href="#plans"
                     class="cta-button solid w-button"
                     id="checkPricingButton"
-                    >Проверете ги цените</a
+                    >Check Pricing</a data-pointer="hover" 
                   >
                 </div>
               </div>
@@ -2305,11 +2263,11 @@
                     <div class="screen-body">
                       <div class="screen-body-item left">
                         <div class="app-title" id="result">
-                          <span>КОНТАКТ</span>
-                          <span>За Нас</span>
+                          <span>CONTACT</span>
+                          <span>US</span>
                         </div>
                         <div class="app-contact">
-                          КОНТАКТ : +389 71 878 598
+                          CONTACT : +389 71 878 598
                           <br />webify.macedonia@gmail.com
                         </div>
                       </div>
@@ -2327,46 +2285,46 @@
                           />
 
                           <div class="app-form-group">
-                            <input
+                            <input data-pointer="input"
                               class="app-form-control"
                               name="name"
-                              placeholder="Име"
+                              placeholder="NAME"
                               autocomplete="given-name"
                               required
                             />
                           </div>
 
                           <div class="app-form-group">
-                            <input
+                            <input data-pointer="input"
                               class="app-form-control"
                               name="email"
-                              placeholder="Емаил"
+                              placeholder="EMAIL"
                               autocomplete="email"
                               required
                             />
                           </div>
                           <div class="app-form-group">
-                            <input
+                            <input data-pointer="input"
                               class="app-form-control"
                               name="number"
-                              placeholder="Телефонски број"
+                              placeholder="CONTACT NO"
                               autocomplete="tel"
                             />
                           </div>
                           <div class="app-form-group message">
-                            <input
+                            <input data-pointer="input"
                               class="app-form-control"
                               name="mesage"
-                              placeholder="Порака"
+                              placeholder="MESSAGE"
                               autocomplete="off"
                               required
                             />
                           </div>
                           <div class="app-form-group buttons">
-                            <button type="submit" class="app-form-button">
-                              ОТКАЖИ
+                            <button  data-pointer="hover" type="submit" class="app-form-button">
+                              CANCEL
                             </button>
-                            <button class="app-form-button">ИСПРАТИ</button>
+                            <button  data-pointer="hover" class="app-form-button">SEND</button>
                           </div>
                         </form>
                       </div>
@@ -2384,9 +2342,9 @@
             <div class="page-padding">
               <div class="vertical-spacing footer-spacing">
                 <div class="footer-flex">
-                  <a href="#" class="footer-brand w-inline-block">
+                  <a data-pointer="hover"  href="#" class="footer-brand w-inline-block">
                     <div id="webifyLogoImg2"></div>
-                  </a>
+                  </a data-pointer="hover" >
                   <div class="footer-link-flex">
                     <div class="footer_text-wrapper">
                       <div class="copyright-text">
@@ -2395,12 +2353,12 @@
                           document.write(new Date().getFullYear());
                         </script>
                       </div>
-                      <a href="/terms-and-conditions" class="footer-link"
-                        >Законите</a
+                      <a data-pointer="hover"  href="/terms-and-conditions" class="footer-link"
+                        >Legals</a data-pointer="hover" 
                       >
                     </div>
                     <div class="social-link-grid">
-                      <a
+                      <a data-pointer="hover" 
                         id="w-node-_40c23669-aad4-7fde-cd0f-3bb98bb52768-8bb5275e"
                         href="https://www.linkedin.com/company/webifymk"
                         target="_blank"
@@ -2429,8 +2387,8 @@
                                 />
                               </clipPath>
                             </defs>
-                          </svg></div></a
-                      ><a
+                          </svg></div></a data-pointer="hover" 
+                      ><a data-pointer="hover" 
                         id="w-node-_40c23669-aad4-7fde-cd0f-3bb98bb5276a-8bb5275e"
                         href="https://www.instagram.com/"
                         target="_blank"
@@ -2464,7 +2422,7 @@
                               </clipPath>
                             </defs>
                           </svg></div
-                      ></a>
+                      ></a data-pointer="hover" >
                     </div>
                   </div>
                 </div>
@@ -2489,5 +2447,11 @@
     ></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+ 
   </body>
+
 </html>
+
+ 
+ 
+ 
