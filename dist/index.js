@@ -204,7 +204,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _contactForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contactForm */ "./src/js/contactForm.js");
 
-const buttons = document.querySelectorAll(".openContactModal");
+const buttonsEn = document.querySelectorAll(".openContactModal");
 const buttonsMk = document.querySelectorAll(".openContactModalMk");
 const modal = document.getElementById("modalContainer");
 const modalContent = document.getElementById("modalContent");
@@ -359,13 +359,13 @@ function closeModal() {
   }, 400); // Match this to the transition duration
 }
 function initContactButtons() {
-  buttons.forEach(btn => {
+  buttonsEn.forEach(btn => {
     const message = btn.dataset.message || "MESSAGE";
     btn.addEventListener("click", event => {
       openContactModal(message, "en");
     });
   });
-  buttons.forEach(btn => {
+  buttonsMk.forEach(btn => {
     const message = btn.dataset.message || "ПОРАКА";
     btn.addEventListener("click", event => {
       openContactModal(message, "mk");
@@ -8537,18 +8537,6 @@ if (typeof window === "undefined") {
 window.onbeforeunload = function (e) {
   localStorage.clear();
 };
-
-// Create the OG image meta tag
-const ogImage = document.createElement('meta');
-ogImage.setAttribute('property', 'og:image');
-ogImage.content = './image/webify_poster.png';
-document.head.appendChild(ogImage);
-
-// Create the Twitter image meta tag
-const twitterImage = document.createElement('meta');
-twitterImage.name = 'twitter:image';
-twitterImage.content = './image/webify_poster.png';
-document.head.appendChild(twitterImage);
 })();
 
 /******/ })()

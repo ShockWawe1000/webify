@@ -1,6 +1,6 @@
 import { contactFormLogic, contactFormLogicModal } from "./contactForm";
 
-const buttons = document.querySelectorAll(".openContactModal");
+const buttonsEn = document.querySelectorAll(".openContactModal");
 const buttonsMk = document.querySelectorAll(".openContactModalMk");
 const modal = document.getElementById("modalContainer");
 const modalContent = document.getElementById("modalContent");
@@ -184,7 +184,7 @@ function closeModal() {
 
 export function initContactButtons(){
 
-  buttons.forEach((btn) => {
+  buttonsEn.forEach((btn) => {
     const message = btn.dataset.message || "MESSAGE";
     btn.addEventListener("click", (event) => {
       
@@ -195,7 +195,7 @@ export function initContactButtons(){
   
   
 
-    buttons.forEach((btn) => {
+  buttonsMk.forEach((btn) => {
       const message = btn.dataset.message || "ПОРАКА";
       btn.addEventListener("click", (event) => {
         
