@@ -311,7 +311,7 @@ width: 50%;
 
   cursor: none;
   background-color: rgb(20, 20, 20);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   transition: ease-in-out 0.5s;

@@ -831,13 +831,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   introScreen: () => (/* binding */ introScreen)
 /* harmony export */ });
+let intro = document.getElementById("intro");
+let logo = document.getElementById("animatedLogo");
 function introScreen() {
+  intro.style.display = "flex";
   $(document).ready(function () {
     $(window).on("load", function () {
       function endIntro() {
         setTimeout(() => {
-          let intro = document.getElementById("intro");
-          let logo = document.getElementById("animatedLogo");
           intro.style.backgroundColor = "rgba(0,0,0,0)";
           logo.style.opacity = 0;
           setTimeout(() => {
@@ -846,12 +847,11 @@ function introScreen() {
           }, 1000);
         }, 4300);
       }
-      endIntro();
       if (!sessionStorage.getItem('doNotShow')) {
         sessionStorage.setItem('doNotShow', 'true');
         endIntro();
       } else {
-        //    document.getElementById("intro").style.display = "none"; 
+        document.getElementById("intro").style.display = "none";
       }
     });
   });
