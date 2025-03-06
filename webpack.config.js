@@ -96,11 +96,11 @@ module.exports = {
                 'og:description': { property: 'og:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
                 'og:type': { property: 'og:type', content: 'website' },
                 'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/' },
-                'og:image': { property: 'og:image', content: './src/image/products/webify_poster.png' },
+              
                 'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
                 'twitter:title': { name: 'twitter:title', content: 'Webify - Your Best Digital Partner' },
                 'twitter:description': { name: 'twitter:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
-                'twitter:image': { name: 'twitter:image', content: './src/image/products/webify_poster.png' }
+              
             }
         }),
 
@@ -116,11 +116,11 @@ module.exports = {
                 'og:description': { property: 'og:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
                 'og:type': { property: 'og:type', content: 'website' },
                 'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/mk' },
-                'og:image': { property: 'og:image', content: './src/image/products/webify_poster.png' },
+              
                 'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
                 'twitter:title': { name: 'twitter:title', content: 'Webify - Вашиот Најдобар Партнер' },
                 'twitter:description': { name: 'twitter:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
-                'twitter:image': { name: 'twitter:image', content: './src/image/products/webify_poster.png' }
+             
             }
         }),
 
@@ -136,11 +136,11 @@ module.exports = {
                 'og:description': { property: 'og:description', content: 'Read the terms and conditions for using Webifys services.' },
                 'og:type': { property: 'og:type', content: 'website' },
                 'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/termsnconditions' },
-                'og:image': { property: 'og:image', content: './src/image/products/webify_poster.png' },
+              
                 'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
                 'twitter:title': { name: 'twitter:title', content: 'Webify - Terms and Conditions' },
                 'twitter:description': { name: 'twitter:description', content: 'Read the terms and conditions for using Webifys services.' },
-                'twitter:image': { name: 'twitter:image', content: './src/image/products/webify_poster.png' }
+                
             }
         }),
     ],

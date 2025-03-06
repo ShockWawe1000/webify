@@ -8524,6 +8524,18 @@ if (typeof window === "undefined") {
 window.onbeforeunload = function (e) {
   localStorage.clear();
 };
+
+// Create the OG image meta tag
+const ogImage = document.createElement('meta');
+ogImage.setAttribute('property', 'og:image');
+ogImage.content = './image/webify_poster.png';
+document.head.appendChild(ogImage);
+
+// Create the Twitter image meta tag
+const twitterImage = document.createElement('meta');
+twitterImage.name = 'twitter:image';
+twitterImage.content = './image/webify_poster.png';
+document.head.appendChild(twitterImage);
 })();
 
 /******/ })()
