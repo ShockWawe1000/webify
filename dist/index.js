@@ -630,6 +630,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _image_bg_line5_svg__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../image/bg/line5.svg */ "./src/image/bg/line5.svg");
 /* harmony import */ var _image_bg_line6_svg__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../image/bg/line6.svg */ "./src/image/bg/line6.svg");
 /* harmony import */ var _image_bg_line8_svg__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../image/bg/line8.svg */ "./src/image/bg/line8.svg");
+/* harmony import */ var _image_webify_poster_png__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../image/webify_poster.png */ "./src/image/webify_poster.png");
 
 
 //import animated_logo_S from "../image/intro_webify_logo_S.gif"
@@ -675,6 +676,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //ProcessImg
+
 
 
 
@@ -8209,10 +8211,10 @@ module.exports = VanillaTilt;
 /*!***************************************!*\
   !*** ./src/image/favicon/favicon.png ***!
   \***************************************/
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = "data:image/png;base64,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";
+module.exports = __webpack_require__.p + "images/favicon.png";
 
 /***/ }),
 
@@ -8223,7 +8225,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "e6c91146a96315639235.png";
+module.exports = __webpack_require__.p + "images/faviconL.png";
 
 /***/ }),
 
@@ -8234,7 +8236,7 @@ module.exports = __webpack_require__.p + "e6c91146a96315639235.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "0fb3f8e0eb66be72dee4.gif";
+module.exports = __webpack_require__.p + "images/2323.gif";
 
 /***/ }),
 
@@ -8245,7 +8247,7 @@ module.exports = __webpack_require__.p + "0fb3f8e0eb66be72dee4.gif";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "190dcb1621f3124dd041.gif";
+module.exports = __webpack_require__.p + "images/intro.gif";
 
 /***/ }),
 
@@ -8256,7 +8258,7 @@ module.exports = __webpack_require__.p + "190dcb1621f3124dd041.gif";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "b8270b95557d6e1f66c7.webp";
+module.exports = __webpack_require__.p + "images/big.webp";
 
 /***/ }),
 
@@ -8267,7 +8269,7 @@ module.exports = __webpack_require__.p + "b8270b95557d6e1f66c7.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "d4228f5076ca9b6cd66b.webp";
+module.exports = __webpack_require__.p + "images/long1.webp";
 
 /***/ }),
 
@@ -8278,7 +8280,7 @@ module.exports = __webpack_require__.p + "d4228f5076ca9b6cd66b.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "0faf5cd1119f8ab2c38d.webp";
+module.exports = __webpack_require__.p + "images/long2.webp";
 
 /***/ }),
 
@@ -8289,7 +8291,7 @@ module.exports = __webpack_require__.p + "0faf5cd1119f8ab2c38d.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "535b4373b4d41423a720.webp";
+module.exports = __webpack_require__.p + "images/long3.webp";
 
 /***/ }),
 
@@ -8300,7 +8302,7 @@ module.exports = __webpack_require__.p + "535b4373b4d41423a720.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "363dc10fe4b911973fd0.webp";
+module.exports = __webpack_require__.p + "images/square1.webp";
 
 /***/ }),
 
@@ -8311,7 +8313,7 @@ module.exports = __webpack_require__.p + "363dc10fe4b911973fd0.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "0264b6414c8cb0a316b7.webp";
+module.exports = __webpack_require__.p + "images/square2.webp";
 
 /***/ }),
 
@@ -8322,7 +8324,7 @@ module.exports = __webpack_require__.p + "0264b6414c8cb0a316b7.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "684129959e81c8e1da05.webp";
+module.exports = __webpack_require__.p + "images/graph1.webp";
 
 /***/ }),
 
@@ -8333,7 +8335,7 @@ module.exports = __webpack_require__.p + "684129959e81c8e1da05.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "9d40d50423a584517cad.webp";
+module.exports = __webpack_require__.p + "images/graph2.webp";
 
 /***/ }),
 
@@ -8344,7 +8346,7 @@ module.exports = __webpack_require__.p + "9d40d50423a584517cad.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "bae9d192660f9d7c9459.webp";
+module.exports = __webpack_require__.p + "images/graph3.webp";
 
 /***/ }),
 
@@ -8355,7 +8357,18 @@ module.exports = __webpack_require__.p + "bae9d192660f9d7c9459.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "257ae72ab748540e7b4a.png";
+module.exports = __webpack_require__.p + "images/trustpilot.png";
+
+/***/ }),
+
+/***/ "./src/image/webify_poster.png":
+/*!*************************************!*\
+  !*** ./src/image/webify_poster.png ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/webify_poster.png";
 
 /***/ })
 

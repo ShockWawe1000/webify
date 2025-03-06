@@ -69,7 +69,7 @@ import line8 from "../image/bg/line8.svg"
 
 
 
-
+import metaImg from "../image/webify_poster.png"
 
 
 
