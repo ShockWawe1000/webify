@@ -1,5 +1,3 @@
-import Bowser from "bowser";
-
 
 //import animated_logo_S from "../image/intro_webify_logo_S.gif"
 import webify_logo_animated from "../image/webify_logo_animated.svg"
@@ -16,7 +14,7 @@ import transitionGif from  "../image/mobile/2323.gif"
 // import moonpay from "../image/moonpay.png"
 import trustpilot from "../image/trustpilot.png"
 
-import clutchRating from "../image/clutch.svg"
+// import clutchRating from "../image/clutch.svg"
 import favicon from "../image/favicon/favicon.png"
 import faviconL from "../image/favicon/faviconL.png"
 import webify_logo from "../image/webify_logo.svg"
@@ -119,6 +117,7 @@ function createLoadingSVG(element, id , setClass) {
     svgObject.id = "animated-svg";
     svgObject.type = "image/svg+xml";
     svgObject.data = element;
+    svgObject.alt = "imageLogo"
     svgObject.classList.add(setClass);
     svgObject.style.width = "100vw";  // Make it fit the screen horizontally
     svgObject.style.height = "100vh"; // Make it fit the screen vertically
@@ -152,7 +151,7 @@ function createLogoSVG(element, id , setClass) {
 
 
 
-export function setImages(){
+export function setImages(isHandheld){
 //    createImageDiv(binance, "binanceImg", "image-100")
 //    createImageDiv(moonpay, "moonpayImg", "image-100")
 //    createImageDiv(btc, "btcImg", "image-100")
@@ -160,8 +159,7 @@ export function setImages(){
 
 
  //loading screen
-const browser = Bowser.getParser(window.navigator.userAgent);
-const isHandheld = browser.getPlatformType() === 'tablet' || browser.getPlatformType() === 'mobile';
+
        
 if (!isHandheld) {
     createLogoSVG(webify_logo_animated, "animatedLogo", ["animatedLogo"] , "eager")

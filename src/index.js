@@ -17,19 +17,21 @@ import {initContactButtons } from "./js/contactFormModule"
 import {webflowInit} from "./js/webflowReq"
 import {introScreen} from "./js/introScreen"
 import {tiltCardsLogic} from "./js/tiltCards"
-import {} from './js/cursor';
+import {cursorInit} from './js/cursor';
 import { initCarousel } from './js/carousel';
+import { isHandheld } from './js/isHandgeld';
 
+const isHandheldVar = isHandheld();
 
-    setImages();
+    setImages(isHandheldVar);
     initContactButtons();
- 
+    cursorInit(isHandheldVar)
     var tempElement =  document.getElementById('intro');
     if (typeof(tempElement) != 'undefined' && tempElement != null)
       {
     
      
-        introScreen();
+        introScreen(isHandheldVar);
         webflowInit();
         tiltCardsLogic()
         initCarousel();

@@ -1,6 +1,5 @@
 import gsap from 'gsap';
 import lerp from "lerp";
-import Bowser from "bowser";
 
 const cursorArea  = document.querySelector('.cursor');
 const cursorSmall = document.querySelector('.cursor__circle--small');
@@ -9,6 +8,8 @@ const cursorLarge = document.querySelector('.cursor__circle--large');
 document.body.style.cursor = 'none';
 
     // Cursor
+
+export function cursorInit(isHandheld){
     const Cursor = (() => {
     
   
@@ -120,14 +121,13 @@ document.body.style.cursor = 'none';
     
     })();
     
-    export default Cursor;
+    
     
     // Init
     document.addEventListener('DOMContentLoaded', () => {
         
         // Check Browser & Touch Devices
-        const browser = Bowser.getParser(window.navigator.userAgent);
-        const isHandheld = browser.getPlatformType() === 'tablet' || browser.getPlatformType() === 'mobile';
+       
        
     
         if (!isHandheld) {
@@ -176,4 +176,6 @@ document.body.style.cursor = 'none';
         }
        
     });
+    
+}
     
