@@ -85,24 +85,61 @@ module.exports = {
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         /*new CleanWebpackPlugin(),*/
         new MiniCssExtractPlugin(),
-          new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             filename: 'index.html',
             template: SRC_DIR + "/index.html",
             inject: true,
             chunks: ['index'],
-            filename: 'index.html'
-            }),
-            new HtmlWebpackPlugin({
-                template: './src/mk.html',
-                inject: true,
-                chunks: ['index'],
-                filename: 'mk.html'
-            }),
-            new HtmlWebpackPlugin({
-                template: './src/termsNconditions.html',
-                inject: true,
-                chunks: ['index'],
-                filename: 'termsNconditions.html'
-            }),
+            meta: {
+                'description': { name: 'description', content: 'Your best partner for digital transformation.' },
+                'og:title': { property: 'og:title', content: 'Webify - Your Digital Partner' },
+                'og:description': { property: 'og:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
+                'og:type': { property: 'og:type', content: 'website' },
+                'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/' },
+                'og:image': { property: 'og:image', content: './images/products/webify_poster.png' },
+                'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
+                'twitter:title': { name: 'twitter:title', content: 'Webify - Your Best Digital Partner' },
+                'twitter:description': { name: 'twitter:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
+                'twitter:image': { name: 'twitter:image', content: './images/products/webify_poster.png' }
+            }
+        }),
+
+        // Macedonian Version
+        new HtmlWebpackPlugin({
+            filename: 'mk.html',
+            template: './src/mk.html',
+            inject: true,
+            chunks: ['index'],
+            meta: {
+                'description': { name: 'description', content: 'Вашиот најдобар партнер за дигитализација на бизнис.' },
+                'og:title': { property: 'og:title', content: 'Webify - Најдостапни Веб-страници' },
+                'og:description': { property: 'og:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
+                'og:type': { property: 'og:type', content: 'website' },
+                'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/mk' },
+                'og:image': { property: 'og:image', content: './images/products/webify_poster.png' },
+                'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
+                'twitter:title': { name: 'twitter:title', content: 'Webify - Вашиот Најдобар Партнер' },
+                'twitter:description': { name: 'twitter:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
+                'twitter:image': { name: 'twitter:image', content: './images/products/webify_poster.png' }
+            }
+        }),
+
+        // Terms and Conditions Page
+        new HtmlWebpackPlugin({
+            filename: 'termsNconditions.html',
+            template: './src/termsNconditions.html',
+            inject: true,
+            chunks: ['index'],
+            meta: {
+                'description': { name: 'description', content: 'Terms and conditions for using Webify services.' },
+                'og:title': { property: 'og:title', content: 'Webify - Terms and Conditions' },
+                'og:description': { property: 'og:description', content: 'Read the terms and conditions for using Webifys services.' },
+                'og:type': { property: 'og:type', content: 'website' },
+                'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/termsnconditions' },
+                'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
+                'twitter:title': { name: 'twitter:title', content: 'Webify - Terms and Conditions' },
+                'twitter:description': { name: 'twitter:description', content: 'Read the terms and conditions for using Webifys services.' }
+            }
+        }),
     ],
 };
