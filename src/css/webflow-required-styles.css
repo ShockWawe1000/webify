@@ -338,11 +338,7 @@ z-index: 9999;
 object-fit: cover;
 }
 
-.animatedLogoGif{
-  width: 200px;
-  z-index: 9998;
-  cursor: none;
-}
+
 
 .transitionGif{
 position: absolute;
