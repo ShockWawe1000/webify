@@ -318,11 +318,16 @@ width: 50%;
 }
 
 #animatedLogo{
-  width: 10%;
-  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.animatedLogo{
+  width: 10rem;
+  z-index: 9998;
   cursor: none;
 }
-
 
 #loadingSvg{
 position: absolute;
@@ -332,6 +337,25 @@ width: 100vw;
 z-index: 9999;
 object-fit: cover;
 }
+
+.animatedLogoGif{
+  width: 200px;
+  z-index: 9998;
+  cursor: none;
+}
+
+.transitionGif{
+position: absolute;
+height: 100vh;
+width: 100vw;
+
+z-index: 9999;
+object-fit: cover;
+}
+
+
+
+
 
 .happen-image-wrap{
 height: 300px;

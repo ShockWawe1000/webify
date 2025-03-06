@@ -42,8 +42,8 @@
       background-image: var(--icon);
       background-size: cover;
       display: block;
-      width: 1.125rem;
-      height: var(--height);
+      width: 20px;
+      height: 20px;
     }
 
     &:last-child {
@@ -51,8 +51,8 @@
     }
 
     &.disabled {
-      --color: #b1b8c9;
-      --height: 1.125rem;
+      --color: #ec1d1d;
+      --height: 20px;
       --icon: var(--close);
     }
   }

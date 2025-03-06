@@ -281,7 +281,8 @@ textarea::-webkit-scrollbar-thumb
     }
   
     .screen-body-item.left {
-      margin-bottom: 30px;
+      margin-bottom: 0px;
+      padding-bottom:0px ;
     }
   
     .app-title {

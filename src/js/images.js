@@ -1,15 +1,26 @@
-import binance from "../image/binance.png"
-import btc from "../image/btc.png"
-import eth from "../image/eth.png"
-import sol from "../image/sol.png"
-import moonpay from "../image/moonpay.png"
+import Bowser from "bowser";
+
+
+//import animated_logo_S from "../image/intro_webify_logo_S.gif"
+import webify_logo_animated from "../image/webify_logo_animated.svg"
+import transition from "../image/load_animation.svg"
+import webify_logo_animatedGif from "../image/mobile/intro.gif"
+import transitionGif from  "../image/mobile/2323.gif"
+
+
+
+// import binance from "../image/binance.png"
+// import btc from "../image/btc.png"
+// import eth from "../image/eth.png"
+// import sol from "../image/sol.png"
+// import moonpay from "../image/moonpay.png"
 import trustpilot from "../image/trustpilot.png"
 
 import clutchRating from "../image/clutch.svg"
 import favicon from "../image/favicon/favicon.png"
 import faviconL from "../image/favicon/faviconL.png"
 import webify_logo from "../image/webify_logo.svg"
-import transition from "../image/load_animation.svg"
+
 
 //CardIcons
 import cardIcon1 from "../image/element/cardIcon1.svg"
@@ -57,8 +68,6 @@ import line8 from "../image/bg/line8.svg"
 
 
 
-//import animated_logo_S from "../image/intro_webify_logo_S.gif"
-import webify_logo_animated from "../image/webify_logo_animated.svg"
 
 
 
@@ -148,12 +157,31 @@ export function setImages(){
 //    createImageDiv(moonpay, "moonpayImg", "image-100")
 //    createImageDiv(btc, "btcImg", "image-100")
 //    createImageDiv(sol, "solImg", "image-100")
+
+
+ //loading screen
+const browser = Bowser.getParser(window.navigator.userAgent);
+const isHandheld = browser.getPlatformType() === 'tablet' || browser.getPlatformType() === 'mobile';
+       
+if (!isHandheld) {
+    createLogoSVG(webify_logo_animated, "animatedLogo", ["animatedLogo"] , "eager")
+    createLoadingSVG(transition, "loadingSvg", ["transition"] , "eager" )
+} else {
+   // createImageDiv(webify_logo_animatedGif, "animatedLogo", ["animatedLogoGif"] , "eager")
+    createImageDiv(transitionGif, "loadingSvg", ["transitionGif"] , "eager" )
+
+    console.log('Mobile Animations.');
+}
+
     setFavicon(favicon, "shortcut icon", "image/x-icon")
     setFavicon(faviconL, "apple-touch-icon")
     //logos
     createImageDiv(webify_logo, "webify_logo",[ "webifyLogo"] , "lazy")
     createImageDiv(webify_logo, "webifyLogoImg2", ["webifyLogo"] , "lazy")
 
+
+
+    
     var tempElement =  document.getElementById('trustpilotImg');
     if (typeof(tempElement) != 'undefined' && tempElement != null)
       {
@@ -190,9 +218,7 @@ export function setImages(){
     createImageDiv(develop, "developImg", [ "processImg"] , "lazy" )
     createImageDiv(launch, "launchImg", [ "processImg"] , "lazy" )
     
-    //loading screen
-    createLogoSVG(webify_logo_animated, "animatedLogo", ["animatedLogo"] , "eager")
-    createLoadingSVG(transition, "loadingSvg", ["transition"] , "eager" )
+
 
     createImageDiv(buttonNext, "buttonNext1", ["image-100"] )
     createImageDiv(buttonNext, "buttonNext2", ["image-100"] )

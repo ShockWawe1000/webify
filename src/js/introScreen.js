@@ -17,12 +17,12 @@ export function introScreen(){
                     }, 1000);
                 }, 4300);
             }
-
+            endIntro();
             if (!sessionStorage.getItem('doNotShow')) {
                 sessionStorage.setItem('doNotShow', 'true');
                 endIntro();
             } else {
-                document.getElementById("intro").style.display = "none"; 
+            //    document.getElementById("intro").style.display = "none"; 
             }
         });
     });
