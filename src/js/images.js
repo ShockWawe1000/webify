@@ -2,7 +2,7 @@
 //import animated_logo_S from "../image/intro_webify_logo_S.gif"
 import webify_logo_animated from "../image/webify_logo_animated.svg"
 import transition from "../image/load_animation.svg"
-import webify_logo_animatedGif from "../image/mobile/intro.gif"
+//import webify_logo_animatedGif from "../image/mobile/intro.gif"
 import transitionGif from  "../image/mobile/2323.gif"
 
 
@@ -67,7 +67,7 @@ import line8 from "../image/bg/line8.svg"
 
 
 
-import metaImg from "../image/webify_poster.png"
+import metaImg from "../image/webify_poster.webp"
 
 
 

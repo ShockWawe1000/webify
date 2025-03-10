@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://webifymk.netlify.app/sitemap.xml

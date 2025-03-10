@@ -21,6 +21,9 @@ import {cursorInit} from './js/cursor';
 import { initCarousel } from './js/carousel';
 import { isHandheld } from './js/isHandgeld';
 
+import "./sitemap.xml"
+import "./robots.txt"
+
 const isHandheldVar = isHandheld();
 
     setImages(isHandheldVar);
