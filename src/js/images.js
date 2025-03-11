@@ -3,7 +3,7 @@
 import webify_logo_animated from "../image/webify_logo_animated.svg"
 import transition from "../image/load_animation.svg"
 //import webify_logo_animatedGif from "../image/mobile/intro.gif"
-import transitionGif from  "../image/mobile/2323.gif"
+import transitionGif from  "../image/mobile/introMobile.gif"
 
 
 

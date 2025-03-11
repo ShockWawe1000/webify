@@ -75,6 +75,13 @@ module.exports = {
                 },
             },
             {
+                test: /\.(webm|mp4|ogg)$/i,
+                type: "asset/resource",
+                generator: {
+                    filename: 'videos/[name][ext][query]', // Stores videos in a "videos" folder
+                }
+            },
+            {
                 test: /\.txt/,
                 type: 'asset/resource',
                 generator: {
@@ -112,13 +119,13 @@ module.exports = {
             chunks: ['index'],
             meta: {
                 'description': { name: 'description', content: 'Your best partner for digital transformation.' },
-                'og:title': { property: 'og:title', content: 'Webify - Your Digital Partner' },
+
                 'og:description': { property: 'og:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
                 'og:type': { property: 'og:type', content: 'website' },
                 'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/' },
                    'og:image': { property: 'og:image', content: 'https://webifymk.netlify.app/images/webify_poster.webp' },
                 'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
-                'twitter:title': { name: 'twitter:title', content: 'Webify - Your Best Digital Partner' },
+                'twitter:title': { name: 'twitter:title', content: 'Webify - Acsessible Website Design & Development' },
                 'twitter:description': { name: 'twitter:description', content: 'Discover Webify, a leading web design agency providing instant access to expert creatives for your business.' },
                 'twitter:image': { name: 'twitter:image', content: 'https://webifymk.netlify.app/images/webify_poster.webp' }
             }
@@ -132,13 +139,13 @@ module.exports = {
             chunks: ['index'],
             meta: {
                 'description': { name: 'description', content: 'Вашиот најдобар партнер за дигитализација на бизнис.' },
-                'og:title': { property: 'og:title', content: 'Webify - Најдостапни Веб-страници' },
+
                 'og:description': { property: 'og:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
                 'og:type': { property: 'og:type', content: 'website' },
                 'og:url': { property: 'og:url', content: 'https://webifymk.netlify.app/mk' },
                 'og:image': { property: 'og:image', content: 'https://webifymk.netlify.app/images/webify_poster.webp' },
                 'twitter:card': { name: 'twitter:card', content: 'summary_large_image' },
-                'twitter:title': { name: 'twitter:title', content: 'Webify - Вашиот Најдобар Партнер' },
+                'twitter:title': { name: 'twitter:title', content: 'Webify - Најдостапни Веб-страници' },
                 'twitter:description': { name: 'twitter:description', content: 'Откријте го Webify, водечки веб-дизајнери со пристап до искусни креативци за вашиот бизнис.' },
                 'twitter:image': { name: 'twitter:image', content: 'https://webifymk.netlify.app/images/webify_poster.webp' }
             }
